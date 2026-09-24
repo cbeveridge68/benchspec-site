@@ -1,5 +1,83 @@
 # Work record — catalogue v1
 
+## Current work — first Lot 31 catalogue batch, 24 September 2026
+
+Status: bounded implementation and validation complete on `feat/catalogue-v1`: four additional product pages, five saleable product pages in total. TSI and Swagelok KPR are withheld because Craig confirmed they are not yet listed on eBay. The containing commit SHA and remote push verification are reported in the handoff. **Not merged or deployed.** This section supersedes the first-slice status and validation records below, which are historical.
+
+Bounded scope: six requested items only (BS-INFI-001, BS-TSI-001, BS-PPUR-001, BS-MAGV-001, BS-SWAG-004 and BS-SPIR-001), using hand-authored pages and the existing layout. Publish only items with actual photographs, an established public asking price and a positively identified current BenchSpec eBay destination. Keep incomplete items outside `site/`, with exact blockers recorded here. Never infer completed testing from plans or publish private commercial figures.
+
+Primary evidence: current `cbeveridge68/erpnext-ops` main at `5cafd9b3d7a4f873d10cbaa65f81d5add254cf8f`; `benchspec/auctions/grays lot31/BenchSpec_Lot31_Audit.csv` (blob `a1e0c991f08e95d820e76b3972807234043ef478`) and `Lot31_Pricing_Strategy_2026-09-17.md` (blob `b9fa7881478ae512e8a44a13c3b9890fd461b873`). The source checkout's unrelated changes remain untouched.
+
+Live [BenchSpec eBay store](https://www.ebay.com.au/str/benchspec) inspected in Chrome on 24 September: exact controller, Perma Pure, MAG-VIEW and Spirax listings found. Craig explicitly approved using the current live Perma Pure A$795, MAG-VIEW A$400 and Spirax A$725 asking prices instead of the older commercial-record prices. Controller remains A$1,995. Actual photographs for all six requested items have been located in the supplied `raw-images/` archive; selected originals will remain outside the deployed tree.
+
+Acceptance: normal/publication site checks; HTML validation; visible/JSON-LD, canonical/sitemap and exact eBay-link agreement; actual-image review; desktop and 390 px mobile screenshots with no overflow; preserved brand/contact/footer and no application JavaScript; sold-state rehearsal; `git diff --check`; commit and push this branch only. Final item disposition and fresh results will be recorded here before handoff.
+
+### Implemented pages and public offer evidence
+
+| Permanent product path under `/products/` | Audit / SKU | Public asking price | Exact BenchSpec eBay destination |
+| --- | --- | --- | --- |
+| `infinity-fluids-ptc-12-20-1p/` | 13014 / BS-INFI-001 | A$1,995 | [198658139207](https://www.ebay.com.au/itm/198658139207) |
+| `perma-pure-fc125-240-5mp/` | 31006 / BS-PPUR-001 | A$795 each | [198644525062](https://www.ebay.com.au/itm/198644525062) |
+| `mag-view-mvm-050-q/` | 13011 / BS-MAGV-001 | A$400 each | [198645719640](https://www.ebay.com.au/itm/198645719640) |
+| `spirax-sarco-fa-150-71497/` | 13013 / BS-SPIR-001 | A$725 | [198646864549](https://www.ebay.com.au/itm/198646864549) |
+
+The live store returned HTTP 200 in Chrome and supplied these exact item links, exact model titles and AUD prices. Later direct-item retrieval encountered eBay HTTP 403/verification challenges; these were not bypassed. Destination identity and asking prices are established by the successfully retrieved live seller store, not invented links or other sellers' offers. The individual listings' shipping coverage and manual allocation could not be independently re-read: new pages therefore say “International shipping enquiries welcome”, direct transaction terms to eBay, and do not promise a manual with each MAG-VIEW unit. Quantities follow the current audit (controller 1, Perma Pure 2, MAG-VIEW 2, Spirax 1); recheck live quantity and destination-specific delivery immediately before deployment.
+
+The existing [CRES heater listing](https://www.ebay.com.au/itm/198659547917) was successfully retrieved directly: BenchSpec, exact MPN, A$1,495 and an active Buy It Now offer. This resolves the historical inability to read that live offer on this review date; it does not remove normal pre-launch stock checks.
+
+Changes remain bounded: four manually authored HTML pages, four homepage entries (five total), four sitemap entries and accurate two-way Infinity related-equipment links. Header/footer, logo/favicon, navy/white CSS, contact details, homepage positioning, robots and no-JavaScript architecture are unchanged. No test plan is represented as a completed test. Optional unrecorded weights/dimensions and MAG-VIEW connection size are omitted. The apparently unused items retain that qualified physical-condition description; their conservative `UsedCondition` metadata describes pre-owned surplus, not a claim of new or function-tested stock.
+
+The existing checker now recognises the specific process-testing, dry-flow and wet/pressure-test boundaries for this batch, requiring the same explicit limitation in visible text and structured Test status. A bare “Untested” label still fails. No dependency, build step or product-data layer was added. README now describes the five-product catalogue and item-specific publication gating.
+
+### Withheld items — exact blockers
+
+- **TSI 4140D / BS-TSI-001 / audit 13021:** Craig confirmed no current eBay listing exists. The commercial record provides a non-tested/open-box asking range, not a single verified live asking price. Required before publication: the exact live BenchSpec listing and its chosen non-tested public BIN price. Actual kit, instrument, historical calibration label and filter photographs are available and selected originals are retained. Calibration dated 04/08/2014 is historical only; no completed power/display/zero-flow test is recorded. The Infinite Filter 14SX remains an unverified third-party accessory, not a claimed calibrated/matched TSI component. No page, card, sitemap entry, Offer or purchase action was published.
+- **Swagelok KPR1DRF412A20000 / BS-SWAG-004 / audit 13012:** Craig confirmed no current eBay listing exists. A$649 remains the provisional public asking position in the inspected commercial record, not a verified live offer. Required before publication: exact live BenchSpec listing and confirmation of its public BIN price. Four actual package/marking photographs are retained. Preserve the intentionally unopened package and fitted protective caps; do not claim factory-sealed packaging or completed pressure testing. No page, card, sitemap entry, Offer or purchase action was published.
+
+### Selected actual-item photograph provenance
+
+Controller web assets use **only the four processed `.jpg` files immediately inside this repository's `raw-images/`**, as explicitly directed by Craig during review. The older controller `.jpeg` files in the timestamped subfolder are not used. The selected processed files are preserved unchanged; only WebP encodings and 480 px derivatives are deployed.
+
+| Controller web asset | Source in immediate `raw-images/` | Source dimensions |
+| --- | --- | --- |
+| `overview.webp` | `2026-09-13_16-32-22_AEST_01_IMG_8A225C25-AFCD-46D2-B5C1-6C2F82B73CC8.jpg` | 1312 × 1600 |
+| `interior.webp` | `2026-09-13_16-32-22_AEST_02_IMG_1841ACFD-E95E-4483-A29F-6F20C927459D.jpg` | 1600 × 1148 |
+| `enclosure.webp` | `2026-09-13_16-32-22_AEST_03_IMG_32C1F8A3-AE64-49A7-A39F-6D4FF6956111.jpg` | 1155 × 1600 |
+| `manual.webp` | `2026-09-13_16-33-44_AEST_01_IMG_D620011F-A2EE-48B6-8C4D-2ECA550D937A.jpg` | 1203 × 1600 |
+
+Other selected sources are unchanged files inside `raw-images/BenchSpec_Grays_Lot31_Audit_Images_Timestamped/`. Each timestamp/sequence prefix below identifies one original unambiguously; original UUID filenames are retained. All deployed sources below are 1152 × 1536. Full-size WebP quality 86 and 480 px quality 82 derivatives retain the supplied framing; no substitute imagery or AI processing was used.
+
+| Product / web asset | Original filename prefix (all dated 2026-09-13) |
+| --- | --- |
+| Perma Pure / `overview.webp` | `2026-09-13_15-44-01_AEST_01_IMG_` |
+| Perma Pure / `serial-011.webp` | `2026-09-13_15-44-01_AEST_02_IMG_` |
+| Perma Pure / `serial-010.webp` | `2026-09-13_15-44-01_AEST_03_IMG_` |
+| Perma Pure / `pair.webp` | `2026-09-13_15-44-01_AEST_05_IMG_` |
+| MAG-VIEW / `overview.webp` | `2026-09-13_16-22-29_AEST_01_IMG_` |
+| MAG-VIEW / `packaged.webp` | `2026-09-13_16-22-29_AEST_02_IMG_` |
+| MAG-VIEW / `manual.webp` | `2026-09-13_16-34-15_AEST_01_IMG_` |
+| Spirax / `overview.webp` | `2026-09-13_16-28-38_AEST_01_IMG_` |
+| Spirax / `ratings.webp` | `2026-09-13_16-28-38_AEST_02_IMG_` |
+| Spirax / `body.webp` | `2026-09-13_16-28-38_AEST_03_IMG_` |
+| Spirax / `audit-label.webp` | `2026-09-13_16-28-38_AEST_04_IMG_` |
+
+For the withheld items, preserve the four `2026-09-13_16-26-03_AEST_01` through `_04` KPR photographs and TSI sources `IMG_2B67D908-35B9-43D7-A932-42038DC4AB82.jpeg` (kit), `IMG_43F218E7-0F1C-44B0-B93C-770210CCF5CB.jpeg` (instrument), `IMG_C7DDB484-78EA-420F-AAD1-452D2DADFC07.jpeg` (model/serial/historical calibration) and `IMG_B3BF9F9B-9403-4822-91FE-6579BE5A3EEB.jpeg` (filter). These eight files remain outside the deployed tree and are not used by any public page. Other unrelated supplied images remain untouched and untracked.
+
+### Final batch validation — after processed controller-photo replacement
+
+- `python3 tools/check_site.py` and `python3 tools/check_site.py --publication`: **PASS**, all six HTML pages. Exact visible/structured identifiers, asking prices, status and purchase URLs agree; local images/links resolve; sitemap has exactly the six self-canonical URLs. Blocked products are absent from the deployable tree.
+- HTML Validate 11.16.0: **PASS**, all six pages. `xmllint --noout site/sitemap.xml site/assets/benchspec-logo.svg site/assets/favicon.svg`: **PASS**. `git diff --check`: **PASS**.
+- Chrome at **390, 768 and 1440 px**, every page: **PASS**. No horizontal overflow or header crowding; all photographs decode and full-size photo links return HTTP 200; no application scripts; header/footer identity and exact email destinations intact. Forward/reverse keyboard navigation, visible focus, skip links and JavaScript-disabled product navigation pass. Mail links were checked without sending email or claiming mailbox deliverability.
+- Desktop/mobile screenshots visually reviewed, including corrected controller framing/orientation. Final captures are `.qa/lot31/homepage-{desktop,mobile}.png` and `.qa/lot31/<product-slug>-{desktop,mobile}.png` for all five products, with tablet captures and `browser-results.json` alongside. QA outputs are ignored local review artifacts, outside `site/`.
+- Available-to-sold rehearsal: **PASS for each of the five products independently**, on disposable copies only. Sold/SoldOut agree, purchase action and buying instructions are removed, last asking price is labelled, only the sold item's homepage card is removed, and technical content/photos/sitemap remain intact. Each permanent URL still returns HTTP 200; unknown paths return HTTP 404. Actual repository state remains available.
+- Verification-boundary regression checks: **40 PASS** across the five products and both checker modes. Whitespace-wrapped exact limitations are accepted; removing the visible limitation while retaining JSON-LD, replacing it with a bare “Untested” label, or claiming successful testing is rejected.
+- Additional local mobile Lighthouse 13.5.0 checks: homepage **98 performance / 100 accessibility / 100 best practices / 100 SEO**, LCP 2.1 s, CLS 0; processed-photo controller page **91 / 100 / 100 / 100**, LCP 1.7 s, CLS 0. Both meet the ≥90 performance target. These are local-preview results, not production-host measurements; browser validation was also running during these measurements.
+- The catalogue-guide checklist was applied to each new page: exact identity, actual photographs, approved current public price, audited quantity, known-condition-first language, specific recorded test boundary, item-specific eBay terms and conservative shipping wording. No factory-sealed, calibrated, refurbished, completed functional-test or tested-pairing claim was introduced. Public price changes were explicitly approved by Craig. Exact eBay destinations were positively identified in the live BenchSpec store, with the direct-item access limitation documented above.
+
+Remaining items: two unlisted products require their own verified live offers before pages can be published; MAG-VIEW manual allocation remains item-specific; stock/delivery terms require the routine launch recheck. Hosting/DNS, Search Console and public-host checks remain a separate authorised launch step. No source-system, eBay listing, merge, deployment or DNS changes were made.
+
+## Historical first-slice record
+
 Status: first slice implemented with actual-item photographs; **not merged or deployed**. The live eBay offer recheck and separate launch checks remain outstanding. Approved by Craig on 24 September 2026, including the subsequent heading/copy/photo amendments.
 
 Current approved state: the header logo reads **SPECIFIED • VERIFIED** and the heater short condition reads **Used item in very clean physical condition. Visually inspected and verified complete as offered.** Visible copy, metadata, JSON-LD and `CATALOGUE_GUIDE.md` agree. Fresh normal/publication, HTML/XML and responsive/sold-state checks pass with no local validation exception. See “Current approved-state validation” below for the authoritative results. All earlier review/validation sections are historical. Branch: `feat/catalogue-v1`; no merge or deployment.
