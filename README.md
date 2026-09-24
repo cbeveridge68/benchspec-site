@@ -1,6 +1,6 @@
 # BenchSpec catalogue
 
-Small, hand-authored catalogue for specialist laboratory and process equipment. Production origin: **https://benchspec.com.au**. Purchases take place on eBay.
+Small, hand-authored catalogue for specialist technical equipment and parts. Production origin: **https://benchspec.com.au**. Purchases take place on eBay.
 
 The first product is intentionally the Infinity Fluids CRES-ILB-12-0010-K-XP-PTC inline heater. Actual-item photographs are included. The branch remains unmerged and undeployed; the live eBay offer recheck and separate launch checks are recorded in [WORK.md](WORK.md).
 
@@ -26,7 +26,7 @@ The dependency-free checker verifies internal links/assets, metadata, JSON-LD co
 1. Start from the matching physical audit and current pricing record in `cbeveridge68/erpnext-ops`. Record source revision, audit reference, selected photographs and offer evidence in the work record. Only completed tests support testing claims. Keep negotiation targets/floors and other private operating information out of the site.
 2. Copy the existing product HTML into a permanent, lowercase manufacturer/model/MPN directory under `site/products/`. This is an editing pattern, not a template engine. Do not reuse another product's identifiers, claims, price, images or eBay link.
 3. Use photographs of the actual item. Preserve selected source originals under `raw-images/`, outside the web root. Place optimised images under `site/assets/`, provide full-resolution image links, dimensions, alt text and responsive sizes. Never substitute stock or generated pictures. The current page uses the four verified heater originals identified in WORK.md; controller photographs are not heater imagery.
-4. Update title, H1, description, canonical URL, social metadata, JSON-LD and visible content together. Include known specifications, condition/test limits, inclusions and Melbourne location. Omit optional unknown dimensions/weight. Offer price/currency/status must match the visible page and current listing; never publish guessed values or placeholder destinations.
+4. Update title, H1, description, canonical URL, social metadata, JSON-LD and visible content together. Include known specifications, condition/test limits, inclusions and Melbourne location. State what has been identified, visually inspected and functionally tested, if anything, and any specific material limitation. Do not enumerate hypothetical untested scenarios unless directly relevant to safe use or accurate representation. Omit optional unknown dimensions/weight. Offer price/currency/status must match the visible page and current listing; never publish guessed values or placeholder destinations.
 5. Add the product to the homepage and sitemap. Homepage cards always link to BenchSpec product pages. Update the displayed current-equipment count.
 6. Run the checker, HTML validator and browser checks. Check the destination listing belongs to BenchSpec and matches the exact item. There is no automatic price or stock synchronisation; repeat these checks when listing facts change and immediately before publication.
 
