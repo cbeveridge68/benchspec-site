@@ -23,6 +23,8 @@ The dependency-free checker verifies internal links/assets, metadata, JSON-LD co
 
 ## Maintain a product
 
+Follow [CATALOGUE_GUIDE.md](CATALOGUE_GUIDE.md) for the approved catalogue wording, condition boundaries, public contact and business identity.
+
 1. Start from the matching physical audit and current pricing record in `cbeveridge68/erpnext-ops`. Record source revision, audit reference, selected photographs and offer evidence in the work record. Only completed tests support testing claims. Keep negotiation targets/floors and other private operating information out of the site.
 2. Copy the existing product HTML into a permanent, lowercase manufacturer/model/MPN directory under `site/products/`. This is an editing pattern, not a template engine. Do not reuse another product's identifiers, claims, price, images or eBay link.
 3. Use photographs of the actual item. Preserve selected source originals under `raw-images/`, outside the web root. Place optimised images under `site/assets/`, provide full-resolution image links, dimensions, alt text and responsive sizes. Never substitute stock or generated pictures. The current page uses the four verified heater originals identified in WORK.md; controller photographs are not heater imagery.

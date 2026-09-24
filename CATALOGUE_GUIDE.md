@@ -267,6 +267,8 @@ Avoid:
 
 The equipment and technical information should dominate.
 
+Use the approved `site/assets/benchspec-logo.svg` in the header, rendered white on the existing navy band. Preserve its artwork and keep the approved longer brand descriptor as live text. The favicon uses only the icon from that same logo; do not introduce additional decorative brand assets.
+
 ## Do / don't examples
 
 ### Condition

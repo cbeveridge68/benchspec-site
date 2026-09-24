@@ -114,7 +114,8 @@ def check(root, publication=False):
             amount = f"A${float(offer.get('price', 0)):,.0f}"
             require(amount in visible, prefix + "visible/structured price mismatch")
             require(offer.get("itemCondition") == "https://schema.org/UsedCondition", prefix + "condition mismatch")
-            require("untested" in visible.lower(), prefix + "verification limits missing")
+            verification_limit = "functional operation has not been tested under process conditions"
+            require(verification_limit in " ".join(visible.lower().split()), prefix + "verification limits missing")
             for url in data.get("image", []):
                 require(url.startswith(ORIGIN + "/") and (root / urlsplit(url).path.lstrip("/")).is_file(), prefix + "invalid structured image: " + url)
             purchase = [a for a in page.select("a") if "purchase" in a.get("class", "").split()]
