@@ -334,3 +334,26 @@ Before publishing or updating a page, confirm:
 When in doubt:
 
 **state what BenchSpec has confirmed, not everything it has not.**
+
+
+## Public contact and business identity
+
+Use `sales@benchspec.com.au` as the public catalogue contact for technical, shipping and pre-sale enquiries.
+
+Keep eBay as the primary transaction route while email remains available for direct questions and commercial enquiries.
+
+Footer business identity should state:
+
+**BenchSpec · Operated by PartsLab · ABN 14 525 874 055**
+
+Do not over-emphasise the legal identity; keep it in the footer or other low-noise business-information area.
+
+## Catalogue context
+
+The homepage should make it immediately clear that BenchSpec is a direct catalogue of specialist equipment available from stock, not a generic company landing page or isolated set of product pages.
+
+Preferred context line:
+
+**Direct catalogue — specialist equipment available from stock**
+
+Use this as a small eyebrow or contextual line above the homepage H1 rather than as a large marketing hero.
