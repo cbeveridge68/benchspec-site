@@ -89,13 +89,13 @@ Do not simplify or shorten an exact identifier where doing so could reduce searc
 
 Lead with what BenchSpec knows.
 
-Good pattern:
+Good short-form pattern:
 
-**Used · Visually inspected**
+> Used item in very clean physical condition. Visually inspected and verified complete.
 
-Then explain:
+Then, where relevant, explain the verification boundary:
 
-> Very clean physical condition. BenchSpec has confirmed the model, ratings, included components and visible condition. Functional operation has not been tested under process conditions.
+> BenchSpec has confirmed the model, ratings, included components and visible condition. Functional operation has not been tested under process conditions.
 
 Prefer this style over:
 
@@ -273,9 +273,9 @@ The equipment and technical information should dominate.
 
 Do:
 
-> Used · Visually inspected
+> Used item in very clean physical condition. Visually inspected and verified complete.
 
-> Very clean physical condition. BenchSpec has confirmed the model, ratings, included components and visible condition. Functional operation has not been tested under process conditions.
+> BenchSpec has confirmed the model, ratings, included components and visible condition. Functional operation has not been tested under process conditions.
 
 Don't:
 
