@@ -2,7 +2,7 @@
 
 Status: first slice implemented with actual-item photographs; **not merged or deployed**. The live eBay offer recheck and separate launch checks remain outstanding. Approved by Craig on 24 September 2026, including the subsequent heading/copy/photo amendments.
 
-Current finalisation state: approved context, contact/business identity, logo/favicon and condition wording are implemented on `feat/catalogue-v1`. Normal/publication site checks, HTML validation and responsive/sold-state browser checks pass. The old literal-“untested” validation failure is resolved; there is no current local validation exception. See “Current finalisation validation” below for the authoritative final results. No merge or deployment has occurred. The prior visual/positioning/copy refinements were committed and pushed as `7c2411450ab3ddd95e431ce210b2f628d8673d92`; their review-time notes below are historical, not the current status.
+Current approved state: the header logo reads **SPECIFIED • VERIFIED** and the heater short condition reads **Used item in very clean physical condition. Visually inspected and verified complete as offered.** Visible copy, metadata, JSON-LD and `CATALOGUE_GUIDE.md` agree. Fresh normal/publication, HTML/XML and responsive/sold-state checks pass with no local validation exception. See “Current approved-state validation” below for the authoritative results. All earlier review/validation sections are historical. Branch: `feat/catalogue-v1`; no merge or deployment.
 
 ## Objective and scope
 
@@ -14,7 +14,7 @@ The CRES-ILB-12-0010-K-XP-PTC inline heater (BS-INFI-002 / audit 13020) is the i
 - Production origin: `https://benchspec.com.au`.
 - Publishable directory: `site/`; ordinary static HTML/CSS and local product photographs, without a build step.
 - Primary facts: BenchSpec audit and dated pricing records in `cbeveridge68/erpnext-ops`; never infer completed tests from a testing plan.
-- Visual direction: navy header/footer and white/light neutral body, system fonts, subtle rules, compact specification tables, restrained controls, actual equipment photography and exact identification. Approved BenchSpec SVG logo; descriptor: Specialist technical equipment — new surplus, decommissioned and fully specified.
+- Visual direction: navy header/footer and white/light neutral body, system fonts, subtle rules, compact specification tables, restrained controls, actual equipment photography and exact identification. Approved BenchSpec SVG logo with “SPECIFIED • VERIFIED”; live descriptor: Specialist technical equipment — new surplus, decommissioned and fully specified.
 - No framework, application JavaScript, database, CMS, product-data layer, ERPNext integration, eBay API, checkout, search/filtering, analytics scripts, animation, stock imagery or full brand system.
 - Cloudflare/DNS publication and Search Console verification are separate launch tasks. No publication is authorised by this work record itself.
 
@@ -142,9 +142,9 @@ Validation performed after these changes:
 
 Branch: `feat/catalogue-v1`; existing HEAD: `3d87627`. This copy pass and the earlier visual/positioning refinements remain uncommitted for final review. No push, merge, deployment or catalogue expansion performed.
 
-## Current finalisation validation — 24 September 2026
+## Historical finalisation validation — 24 September 2026 (`f737df7`)
 
-This record supersedes the historical review-time statuses above. The previous refinements were committed/pushed as `7c24114`. The latest remote standards (`7175aa6`) and approved logo (`1ab5184`) were incorporated before this bounded finalisation pass.
+Historical result for `f737df7`, before the approved logo tagline and “complete as offered” amendments. The previous refinements were committed/pushed as `7c24114`. The then-current remote standards (`7175aa6`) and approved logo (`1ab5184`) were incorporated before that pass.
 
 Changes:
 
@@ -167,4 +167,28 @@ Final validation:
 - Review screenshots at 1440 px desktop and 390 px mobile are `.qa/finalisation/homepage-desktop.png`, `homepage-mobile.png`, `product-desktop.png` and `product-mobile.png`; both 768 px tablet captures are retained alongside them. These are ignored local review artifacts, outside the deployable site.
 - Final desktop/mobile screenshots were visually inspected after the header touch-target adjustment. Fresh mobile Lighthouse 13.5.0 scores are **100/100/100/100** for performance/accessibility/best practices/SEO on both pages. Homepage LCP 1.5 s; product LCP 1.7 s; both CLS 0. These are local preview results, not production-host measurements.
 
-The containing finalisation commit is on `feat/catalogue-v1`; its SHA and remote-branch verification are reported in the handoff. Unused controller originals remain untracked and untouched. No merge to `main`, deployment or DNS changes are included.
+That finalisation was committed and pushed as `f737df78170c3e541144c1b79ab45fc7cb92a82e`. Unused controller originals were left untracked and untouched. No merge to `main`, deployment or DNS changes were included.
+
+## Current approved-state validation — 24 September 2026
+
+Reconciled against the latest approved remote revision `8d5c98a`. Its existing commits already supply the “SPECIFIED • VERIFIED” logo, “verified complete as offered” wording on both pages and in descriptive metadata/JSON-LD, and the matching catalogue guide. They were fast-forwarded locally and validated without further website, CSS, asset or tooling edits. The only new repository change in this pass is this reconciled work record.
+
+Confirmed final state:
+
+- Header uses `site/assets/benchspec-logo.svg` with the exact approved logo tagline; `site/assets/favicon.svg` remains the favicon. The longer live descriptor, homepage contextual eyebrow, H1, intro, “Available equipment” heading, public email and PartsLab/ABN footer identity retain their exact approved wording.
+- Product short condition is exactly “Used item in very clean physical condition. Visually inspected and verified complete as offered.” The homepage, product meta/OG descriptions and JSON-LD description/test status consistently use “verified complete as offered”.
+- Detailed verification and 120 V handling wording remain unchanged and exact. No prohibited primary label, generic compatibility disclaimer, speculative non-test disclaimer or functional-test success claim has been introduced. eBay remains the primary transaction route.
+- Existing explicit process-testing-limit validation is unchanged. CSS, favicon, product photographs, sitemap, robots and validator are byte-identical to `f737df7`; architecture, page hierarchy and catalogue scope are unchanged.
+
+Fresh validation results:
+
+- `python3 tools/check_site.py`: **pass**. `python3 tools/check_site.py --publication`: **pass**. JSON-LD parses and agrees with visible identifiers, price, status and destination; canonical URLs and sitemap membership agree.
+- HTML Validate 11.16.0: **pass** for both HTML pages. `xmllint --noout site/sitemap.xml site/assets/benchspec-logo.svg site/assets/favicon.svg`: **pass**. `git diff --check`: **pass**.
+- Chrome checks at 1440 px desktop and 390 px mobile (also 320/768 px): **pass**. No horizontal overflow or header crowding. All images decode, local links resolve, exact text assertions pass, full forward/reverse keyboard navigation and skip links pass, and JavaScript-disabled product navigation remains functional.
+- Logo/favicon: **pass**, HTTP 200 with SVG content types and successful decoding. SVG text is exactly “BenchSpec” / “SPECIFIED • VERIFIED”; measured artwork fits inside the viewBox without clipping. Desktop/mobile screenshots were visually inspected.
+- All five `mailto:sales@benchspec.com.au` anchors have the correct address/text and are keyboard accessible. No email was sent or mailbox deliverability claimed. Visible and structured eBay destinations both remain `https://www.ebay.com.au/itm/198659547917`; the separate live-offer launch recheck remains outstanding.
+- Sold-state rehearsal on a disposable copy: **pass**, including the publication checker, Sold/SoldOut agreement, removal from the homepage and removal of the purchase action, permanent URL HTTP 200, retained specifications/photos/sitemap, and unknown-route HTTP 404. Repository stock remains available.
+- Fresh validator regression checks in both modes accept the approved process-testing statement and reject its removal, a bare “Untested” replacement or an opposite successful-test statement. The limitation left in JSON-LD alone does not satisfy the visible-content check.
+- Updated screenshots: `.qa/approved-final-state/homepage-desktop.png`, `homepage-mobile.png`, `product-desktop.png` and `product-mobile.png`, with tablet captures alongside. These remain ignored local review artifacts outside `site/`. No new Lighthouse run was requested or performed for this confirmation pass; all earlier Lighthouse scores above are explicitly historical.
+
+The containing validation-record commit is on `feat/catalogue-v1`; the final SHA and remote verification are reported in the handoff. Unused controller originals remain untracked and untouched. No merge, deployment or DNS changes. Remaining launch checks are unchanged under “Unresolved items”.
