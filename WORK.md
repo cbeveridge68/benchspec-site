@@ -6,7 +6,7 @@ Branch: `feat/lot31-catalogue-batch-2`, created from `origin/main` at `c7d788cb3
 
 ### Published page
 
-- **Swagelok 6LV-CW4BW4 316L VAR Check Valve** — `BS-SWAG-002`, audits 31002 / 31003, at `/products/swagelok-6lv-cw4bw4/`. Seven individually packaged units are offered at A$329 each, using the exact supplied eBay destination: `https://www.ebay.com.au/itm/198644297312`.
+- **Swagelok 6LV-CW4BW4 316L VAR Check Valve** — `BS-SWAG-002`, audits 31002 / 31003, at `/products/swagelok-6lv-cw4bw4/`. Seven individually packaged units are offered at A$329 each, using the exact supplied eBay destination: `https://www.ebay.com.au/itm/198645692654`.
 - Facts are grounded in the Lot 31 audit: 316L VAR construction, 1/4 inch butt-weld connection, individual bags, protective caps and original packaging; five units are marked SC-11. The page does not call the package factory sealed or infer a functional result. It states the positive known condition first, then the recorded boundary: “Packaging seals have been intentionally preserved. No functional or pressure testing has been performed.”
 - Actual photographs are preserved at the top level of `raw-images/` as `swagelok-check-valve1.jpg`, `swagelok-check-valve2.jpg` and `swagelok-check-valve3.jpg`, outside the deployed tree. The deployed WebP derivatives use only those supplied originals. No archive-subfolder, eBay, stock or generated image is used.
 
@@ -14,10 +14,10 @@ Branch: `feat/lot31-catalogue-batch-2`, created from `origin/main` at `c7d788cb3
 
 The operator added matching actual-item photography directly to `raw-images/`, resolving the earlier follow-on blockers. Four hand-authored pages are now published with only those supplied direct-folder sources:
 
-- **Swagelok SS-DLTW4** — `BS-SWAG-001`, 2 units, A$399 each, eBay `198644415676`.
-- **Swagelok PGI-63S-PG300-LA01** — `BS-SWAG-003`, 1 unit, A$175, eBay `198645692654`.
+- **Swagelok SS-DLTW4** — `BS-SWAG-001`, 2 units, A$399 each, eBay `198644297312`.
+- **Swagelok PGI-63S-PG300-LA01** — `BS-SWAG-003`, 1 unit, A$175, eBay `198644415676`.
 - **OMEGA PX2300-0.5BDI** — `BS-OMEG-001`, 2 units, A$425, eBay `198645489207`.
-- **SensorTechnics CTU7001GY7C2** — `BS-SENS-001`, 4 units, A$139.95, eBay `198641044435`.
+- **SensorTechnics CTU7001GY7C2** — `BS-SENS-001`, 4 units, A$139.95, eBay `198645692654`.
 
 The full original supplied WebP files remain outside `site/` in `raw-images/`; deployed assets are derived only from them. No archive-subfolder or substitute imagery is used. All four pages use the audit-recorded, item-specific verification boundary and do not imply pressure, electrical, calibration, loop or functional testing.
 
