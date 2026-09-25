@@ -26,9 +26,9 @@ This record treats the user-supplied exact URLs as the approved eBay destination
 ### Validation — current follow-on batch
 
 - `python3 tools/check_site.py` and `python3 tools/check_site.py --publication`: pass for all 11 HTML pages. This covers local assets, internal links, canonical/sitemap consistency, Product/Offer JSON-LD, visible/structured identifier and price agreement, availability and the explicit verification boundary.
-- The Nu HTML checker (`html5validator`) passes the new product page. A whole-site run of the locally installed, older checker reports only its unsupported `fetchpriority` attribute on six pre-existing pages and its older CSS-property vocabulary; no new page markup error is reported. JSON-LD parses for all pages, and sitemap plus both SVGs parse with `xmllint`.
-- Local Chrome checks at 1440 px and 390 px: homepage and the new product page return HTTP 200, all images decode, no horizontal overflow occurs, email links are present, and the eBay action matches the supplied `198644297312` destination. Current screenshots are retained outside the repository at `/private/tmp/benchspec-render-check/`.
-- A disposable sold-state rehearsal for the new page passes the publication checker: the product remains indexed and returns HTTP 200, structured availability is `SoldOut`, the purchase action/current-stock card are absent, and technical content/photos/sitemap remain. The committed page remains in the available state.
+- The Nu HTML checker (`html5validator`) passes all five follow-on product pages: Swagelok 6LV-CW4BW4, Swagelok SS-DLTW4, Swagelok PGI-63S-PG300-LA01, OMEGA PX2300-0.5BDI and SensorTechnics CTU7001GY7C2. JSON-LD parses for all pages, and sitemap plus both SVGs parse with `xmllint`.
+- Local Chrome checks at 390 px and 1440 px pass for all five follow-on product pages: each returns HTTP 200, has decoded actual-item images and one eBay purchase action, and has no horizontal overflow.
+- A disposable sold-state rehearsal passes the publication checker independently for all five follow-on pages: each product remains indexed, its Offer becomes `SoldOut`, its purchase action/current-stock card is absent, and its technical content, photographs and sitemap entry remain. The committed pages remain available.
 - `git diff --check`: pass. No deployment, merge, DNS, eBay listing or other external system was changed.
 
 ## Historical / previous batch — 25 September 2026
