@@ -1,6 +1,35 @@
 # Work record — Lot 31 catalogue batch 1
 
-## Current batch — 25 September 2026
+## Current batch — Lot 31 follow-on, 25 September 2026
+
+Branch: `feat/lot31-catalogue-batch-2`, created from `origin/main` at `c7d788cb309c979fcc79a1aecc8d5959583837c3`. This deliberately remains a hand-authored static extension; no product-data layer, generator, framework or application script was added.
+
+### Published page
+
+- **Swagelok 6LV-CW4BW4 316L VAR Check Valve** — `BS-SWAG-002`, audits 31002 / 31003, at `/products/swagelok-6lv-cw4bw4/`. Seven individually packaged units are offered at A$329 each, using the exact supplied eBay destination: `https://www.ebay.com.au/itm/198644297312`.
+- Facts are grounded in the Lot 31 audit: 316L VAR construction, 1/4 inch butt-weld connection, individual bags, protective caps and original packaging; five units are marked SC-11. The page does not call the package factory sealed or infer a functional result. It states the positive known condition first, then the recorded boundary: “Packaging seals have been intentionally preserved. No functional or pressure testing has been performed.”
+- Actual photographs are preserved at the top level of `raw-images/` as `swagelok-check-valve1.jpg`, `swagelok-check-valve2.jpg` and `swagelok-check-valve3.jpg`, outside the deployed tree. The deployed WebP derivatives use only those supplied originals. No archive-subfolder, eBay, stock or generated image is used.
+
+### Withheld pending direct-folder photography
+
+The operator supplied exact eBay URLs for the remaining live Lot 31 listings, but the immediate `raw-images/` folder has no matching actual-item photographs for these products. Per the operator’s source restriction, they are deliberately not published and no archive-subfolder image is substituted:
+
+- **Swagelok SS-DLTW4 high-purity diaphragm valve** — exact eBay URL supplied: `https://www.ebay.com.au/itm/198644415676`; missing direct `raw-images/` photographs of the valve and packaging.
+- **Swagelok PGI-63S-PG300-LA01 pressure gauge** — exact eBay URL supplied: `https://www.ebay.com.au/itm/198645692654`; missing direct `raw-images/` photographs of the gauge and markings.
+- **OMEGA PX2300-0.5BDI differential pressure transmitter** — exact eBay URL supplied: `https://www.ebay.com.au/itm/198645489207`; missing direct `raw-images/` photographs of the units and labels.
+- **SensorTechnics CTU7001GY7C2 pressure transmitter** — exact eBay URL supplied: `https://www.ebay.com.au/itm/198641044435`; missing direct `raw-images/` photographs of the units and labels.
+
+This record treats the user-supplied exact URLs as the approved eBay destinations. eBay’s public pages returned an access/error challenge during this pass, so no challenge was bypassed. The public prices/title-to-URL matches used here are those previously read from the live BenchSpec store and are retained only for the published check-valve offer.
+
+### Validation — current follow-on batch
+
+- `python3 tools/check_site.py` and `python3 tools/check_site.py --publication`: pass for all 7 HTML pages. This covers local assets, internal links, canonical/sitemap consistency, Product/Offer JSON-LD, visible/structured identifier and price agreement, availability and the explicit verification boundary.
+- The Nu HTML checker (`html5validator`) passes the new product page. A whole-site run of the locally installed, older checker reports only its unsupported `fetchpriority` attribute on six pre-existing pages and its older CSS-property vocabulary; no new page markup error is reported. JSON-LD parses for all pages, and sitemap plus both SVGs parse with `xmllint`.
+- Local Chrome checks at 1440 px and 390 px: homepage and the new product page return HTTP 200, all images decode, no horizontal overflow occurs, email links are present, and the eBay action matches the supplied `198644297312` destination. Current screenshots are retained outside the repository at `/private/tmp/benchspec-render-check/`.
+- A disposable sold-state rehearsal for the new page passes the publication checker: the product remains indexed and returns HTTP 200, structured availability is `SoldOut`, the purchase action/current-stock card are absent, and technical content/photos/sitemap remain. The committed page remains in the available state.
+- `git diff --check`: pass. No deployment, merge, DNS, eBay listing or other external system was changed.
+
+## Historical / previous batch — 25 September 2026
 
 Branch: `feat/lot31-catalogue-batch-1`, created directly from fetched `origin/main` at `f8df5ffaf60520e2732c230e975ef6b1d1f0074b`. The old diverged `feat/catalogue-v1` was not merged or cherry-picked. Only the approved four-product batch, its current actual-item photographs, associated homepage/sitemap/cross-links, and required README/checker/work records were transferred. The original dirty worktree and unrelated raw images remain untouched. A separate worktree isolates this branch.
 

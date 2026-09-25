@@ -121,6 +121,7 @@ def check(root, publication=False):
                 "units have not been dismantled, wetted or pressure-tested",
                 "functional flow testing has not been performed; both meters remain dry",
                 "wet or pressure testing has not been performed; ports remain capped",
+                "packaging seals have been intentionally preserved. no functional or pressure testing has been performed",
             )
             visible_normalised = " ".join(visible.lower().split())
             test_status = " ".join(
