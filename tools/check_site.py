@@ -111,7 +111,8 @@ def check(root, publication=False):
             require(offer.get("@type") == "Offer", prefix + "Offer missing")
             require(offer.get("priceCurrency") == "AUD", prefix + "unexpected currency")
             require(float(offer.get("price", 0)) > 0, prefix + "price missing")
-            amount = f"A${float(offer.get('price', 0)):,.0f}"
+            price = float(offer.get("price", 0))
+            amount = f"A${price:,.0f}" if price.is_integer() else f"A${price:,.2f}"
             require(amount in visible, prefix + "visible/structured price mismatch")
             require(offer.get("itemCondition") == "https://schema.org/UsedCondition", prefix + "condition mismatch")
             # Specific recorded boundaries for the current catalogue, not a bare
@@ -122,6 +123,9 @@ def check(root, publication=False):
                 "functional flow testing has not been performed; both meters remain dry",
                 "wet or pressure testing has not been performed; ports remain capped",
                 "packaging seals have been intentionally preserved. no functional or pressure testing has been performed",
+                "no pressure or calibration test has been performed",
+                "no loop or zero test has been performed",
+                "no electrical or pressure test has been performed",
             )
             visible_normalised = " ".join(visible.lower().split())
             test_status = " ".join(

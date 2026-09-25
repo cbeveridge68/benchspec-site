@@ -10,20 +10,22 @@ Branch: `feat/lot31-catalogue-batch-2`, created from `origin/main` at `c7d788cb3
 - Facts are grounded in the Lot 31 audit: 316L VAR construction, 1/4 inch butt-weld connection, individual bags, protective caps and original packaging; five units are marked SC-11. The page does not call the package factory sealed or infer a functional result. It states the positive known condition first, then the recorded boundary: “Packaging seals have been intentionally preserved. No functional or pressure testing has been performed.”
 - Actual photographs are preserved at the top level of `raw-images/` as `swagelok-check-valve1.jpg`, `swagelok-check-valve2.jpg` and `swagelok-check-valve3.jpg`, outside the deployed tree. The deployed WebP derivatives use only those supplied originals. No archive-subfolder, eBay, stock or generated image is used.
 
-### Withheld pending direct-folder photography
+### Resolved photo evidence — 25 September 2026
 
-The operator supplied exact eBay URLs for the remaining live Lot 31 listings, but the immediate `raw-images/` folder has no matching actual-item photographs for these products. Per the operator’s source restriction, they are deliberately not published and no archive-subfolder image is substituted:
+The operator added matching actual-item photography directly to `raw-images/`, resolving the earlier follow-on blockers. Four hand-authored pages are now published with only those supplied direct-folder sources:
 
-- **Swagelok SS-DLTW4 high-purity diaphragm valve** — exact eBay URL supplied: `https://www.ebay.com.au/itm/198644415676`; missing direct `raw-images/` photographs of the valve and packaging.
-- **Swagelok PGI-63S-PG300-LA01 pressure gauge** — exact eBay URL supplied: `https://www.ebay.com.au/itm/198645692654`; missing direct `raw-images/` photographs of the gauge and markings.
-- **OMEGA PX2300-0.5BDI differential pressure transmitter** — exact eBay URL supplied: `https://www.ebay.com.au/itm/198645489207`; missing direct `raw-images/` photographs of the units and labels.
-- **SensorTechnics CTU7001GY7C2 pressure transmitter** — exact eBay URL supplied: `https://www.ebay.com.au/itm/198641044435`; missing direct `raw-images/` photographs of the units and labels.
+- **Swagelok SS-DLTW4** — `BS-SWAG-001`, 2 units, A$399 each, eBay `198644415676`.
+- **Swagelok PGI-63S-PG300-LA01** — `BS-SWAG-003`, 1 unit, A$175, eBay `198645692654`.
+- **OMEGA PX2300-0.5BDI** — `BS-OMEG-001`, 2 units, A$425, eBay `198645489207`.
+- **SensorTechnics CTU7001GY7C2** — `BS-SENS-001`, 4 units, A$139.95, eBay `198641044435`.
+
+The full original supplied WebP files remain outside `site/` in `raw-images/`; deployed assets are derived only from them. No archive-subfolder or substitute imagery is used. All four pages use the audit-recorded, item-specific verification boundary and do not imply pressure, electrical, calibration, loop or functional testing.
 
 This record treats the user-supplied exact URLs as the approved eBay destinations. eBay’s public pages returned an access/error challenge during this pass, so no challenge was bypassed. The public prices/title-to-URL matches used here are those previously read from the live BenchSpec store and are retained only for the published check-valve offer.
 
 ### Validation — current follow-on batch
 
-- `python3 tools/check_site.py` and `python3 tools/check_site.py --publication`: pass for all 7 HTML pages. This covers local assets, internal links, canonical/sitemap consistency, Product/Offer JSON-LD, visible/structured identifier and price agreement, availability and the explicit verification boundary.
+- `python3 tools/check_site.py` and `python3 tools/check_site.py --publication`: pass for all 11 HTML pages. This covers local assets, internal links, canonical/sitemap consistency, Product/Offer JSON-LD, visible/structured identifier and price agreement, availability and the explicit verification boundary.
 - The Nu HTML checker (`html5validator`) passes the new product page. A whole-site run of the locally installed, older checker reports only its unsupported `fetchpriority` attribute on six pre-existing pages and its older CSS-property vocabulary; no new page markup error is reported. JSON-LD parses for all pages, and sitemap plus both SVGs parse with `xmllint`.
 - Local Chrome checks at 1440 px and 390 px: homepage and the new product page return HTTP 200, all images decode, no horizontal overflow occurs, email links are present, and the eBay action matches the supplied `198644297312` destination. Current screenshots are retained outside the repository at `/private/tmp/benchspec-render-check/`.
 - A disposable sold-state rehearsal for the new page passes the publication checker: the product remains indexed and returns HTTP 200, structured availability is `SoldOut`, the purchase action/current-stock card are absent, and technical content/photos/sitemap remain. The committed page remains in the available state.
