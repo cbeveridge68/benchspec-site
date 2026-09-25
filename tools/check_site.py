@@ -114,8 +114,23 @@ def check(root, publication=False):
             amount = f"A${float(offer.get('price', 0)):,.0f}"
             require(amount in visible, prefix + "visible/structured price mismatch")
             require(offer.get("itemCondition") == "https://schema.org/UsedCondition", prefix + "condition mismatch")
-            verification_limit = "functional operation has not been tested under process conditions"
-            require(verification_limit in " ".join(visible.lower().split()), prefix + "verification limits missing")
+            # Specific recorded boundaries for the current catalogue, not a bare
+            # "untested" label. Keep the same explicit disclosure in both places.
+            verification_limits = (
+                "functional operation has not been tested under process conditions",
+                "units have not been dismantled, wetted or pressure-tested",
+                "functional flow testing has not been performed; both meters remain dry",
+                "wet or pressure testing has not been performed; ports remain capped",
+            )
+            visible_normalised = " ".join(visible.lower().split())
+            test_status = " ".join(
+                str(prop.get("value", "")) for prop in data.get("additionalProperty", [])
+                if prop.get("name") == "Test status"
+            )
+            test_normalised = " ".join(test_status.lower().split())
+            require(any(limit in visible_normalised and limit in test_normalised
+                        for limit in verification_limits),
+                    prefix + "specific visible/structured verification limits missing or inconsistent")
             for url in data.get("image", []):
                 require(url.startswith(ORIGIN + "/") and (root / urlsplit(url).path.lstrip("/")).is_file(), prefix + "invalid structured image: " + url)
             purchase = [a for a in page.select("a") if "purchase" in a.get("class", "").split()]

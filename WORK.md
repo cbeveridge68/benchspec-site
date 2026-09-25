@@ -1,8 +1,91 @@
-# Work record — catalogue v1
+# Work record — Lot 31 catalogue batch 1
+
+## Current batch — 25 September 2026
+
+Branch: `feat/lot31-catalogue-batch-1`, created directly from fetched `origin/main` at `f8df5ffaf60520e2732c230e975ef6b1d1f0074b`. The old diverged `feat/catalogue-v1` was not merged or cherry-picked. Only the approved four-product batch, its current actual-item photographs, associated homepage/sitemap/cross-links, and required README/checker/work records were transferred. The original dirty worktree and unrelated raw images remain untouched. A separate worktree isolates this branch.
+
+### Scope and factual corrections
+
+- Four new hand-authored product pages: Infinity PTC controller, Perma Pure humidifier, MAG-VIEW flow meter and Spirax Sarco drain trap. The original CRES heater remains available; all five pages and the homepage receive the requested editorial/shipping review. No catalogue expansion beyond these items.
+- Perma Pure source correction supplied by Craig on 25 September: the units are **not capped**. Earlier closure/protection claims are withdrawn, not replaced with another inference. Current wording records very good physical condition with minimal signs of prior use; model and serial numbers verified; physical condition inspected; kept dry. The specific boundary remains: “Units have not been dismantled, wetted or pressure-tested.”
+- Lot 31 physical appearance does not establish an unused history. All item-level descriptions use observed physical condition, followed by recorded verification and the specific functional-test boundary. Unsupported history implications have been removed from cards, visible copy, metadata and JSON-LD. The general BenchSpec brand descriptor is not a condition claim about these items.
+- MAG-VIEW: model, ratings and serial numbers verified; physical condition inspected. Dry condition and the explicit flow-test boundary are retained. One original MVM-Q user's guide is recorded with the stock; allocation is not fixed. The page refers buyers to the eBay listing for the inclusions supplied with the selected unit, without promising a guide with each meter.
+- Spirax: excellent physical condition with minor handling marks. Protective caps and exact pressure/temperature ratings are retained. Wet or pressure testing has not been performed; ports remain capped.
+- Both Infinity pages retain the 120 V safety warning and process-testing limitation. Related-equipment cross-links state that the controller and heater are separate offers from the same lot and have not been functionally tested together.
+- Removed repetitive quantity/pricing captions and mechanical inspection prose. Count: “5 equipment listings”. Image dimensions, responsive descriptors and Open Graph image dimensions match the operator-supplied processed photographs.
+- International shipping is affirmative under Craig's stated operating policy: “Stock in Melbourne, Australia · Ready for international shipping” or the corresponding full sentence. No free-shipping, logistics-cost, warranty or destination-specific promise was added. These instructions supersede older shipping guidance; README records the rule for subsequent Lot 31 work.
+- Plain static HTML/CSS, logo/tagline, navy/white design, contact/ABN, eBay handoff and sold-page behaviour are preserved. No new architecture, application scripts, dependencies or tracked generation/QA tooling.
+
+### Evidence and public offers
+
+Original batch facts were drawn from `cbeveridge68/erpnext-ops` revision `5cafd9b3d7a4f873d10cbaa65f81d5add254cf8f`: `benchspec/auctions/grays lot31/BenchSpec_Lot31_Audit.csv` (blob `a1e0c991f08e95d820e76b3972807234043ef478`) and `Lot31_Pricing_Strategy_2026-09-17.md` (blob `b9fa7881478ae512e8a44a13c3b9890fd461b873`). Craig's subsequent factual corrections, public-price approvals and shipping policy govern this batch. No completed testing is inferred from a testing plan; private commercial figures are not published.
+
+The live [BenchSpec eBay store](https://www.ebay.com.au/str/benchspec) returned HTTP 200 in Chrome on 25 September and positively identified all five exact item links, model titles and public asking prices below. The CRES item page was also readable. The other direct item pages could not be independently retrieved by the web reader; no access challenge was bypassed. Quantities and serials remain the audited values, not a claim that the store index exposes remaining quantity. Local evidence is retained in ignored `.qa/ebay-offer-evidence.json`.
+
+| Product | SKU / audit | Quantity | Public asking price | Exact eBay item |
+| --- | --- | --- | --- | --- |
+| Infinity Fluids CRES-ILB-12-0010-K-XP-PTC | BS-INFI-002 / 13020 | 1 | A$1,495 | [198659547917](https://www.ebay.com.au/itm/198659547917) |
+| Infinity Fluids PTC-12-20-1P | BS-INFI-001 / 13014 | 1 | A$1,995 | [198658139207](https://www.ebay.com.au/itm/198658139207) |
+| Perma Pure FC125-240-5MP | BS-PPUR-001 / 31006 | 2 | A$795 each | [198644525062](https://www.ebay.com.au/itm/198644525062) |
+| MAG-VIEW MVM-050-Q | BS-MAGV-001 / 13011 | 2 | A$400 each | [198645719640](https://www.ebay.com.au/itm/198645719640) |
+| Spirax Sarco FA-150 / 71497 | BS-SPIR-001 / 13013 | 1 | A$725 | [198646864549](https://www.ebay.com.au/itm/198646864549) |
+
+### Current photo sources
+
+The following originals are preserved directly in `raw-images/`, outside the deployed tree. Current processed exports take precedence over older timestamped copies. WebP full-size quality 86 and 480 px quality 82 derivatives preserve their framing; no substitute/generated imagery is used. CRES assets and its original sources are unchanged from main.
+
+| Product / web asset | Current top-level source |
+| --- | --- |
+| Infinity controller / `overview.webp` | `controller1-overview.jpg` |
+| Infinity controller / `interior.webp` | `controller2-interior.jpg` |
+| Infinity controller / `enclosure.webp` | `controller3-enclosure.jpg` |
+| Infinity controller / `manual.webp` | `controller4-manual.jpg` |
+| perma-pure-fc125-240-5mp / `overview.webp` | `perma-pure-humidifier1-overview.jpeg` |
+| perma-pure-fc125-240-5mp / `serial-011.webp` | `perma-pure-humidifier2-serial-011.jpeg` |
+| perma-pure-fc125-240-5mp / `serial-010.webp` | `perma-pure-humidifier3-serial-010.jpeg` |
+| perma-pure-fc125-240-5mp / `pair.webp` | `perma-pure-humidifier4-pair-alternate.jpeg` |
+| mag-view-mvm-050-q / `overview.webp` | `mag-view-flowmeter1-overview-processed.jpg` |
+| mag-view-mvm-050-q / `packaged.webp` | `mag-view-flowmeter2-packaged.jpeg` |
+| spirax-sarco-fa-150-71497 / `overview.webp` | `spirax-trap1-overview.jpeg` |
+| spirax-sarco-fa-150-71497 / `ratings.webp` | `spirax-trap2-ratings.jpeg` |
+| spirax-sarco-fa-150-71497 / `body.webp` | `spirax-trap3-body.jpeg` |
+| spirax-sarco-fa-150-71497 / `audit-label.webp` | `spirax-trap4-audit-label.jpeg` |
+
+The MAG-VIEW manual remains sourced from `raw-images/BenchSpec_Grays_Lot31_Audit_Images_Timestamped/2026-09-13_16-34-15_AEST_01_IMG_65B55FBA-E478-496A-BB15-75AFE4D26A4A.jpeg`. No unrelated archive images or check-valve photographs were included.
+
+### Withheld products
+
+- **TSI 4140D / BS-TSI-001 / audit 13021:** Craig confirmed it is not listed. Publication requires an exact live BenchSpec eBay URL and its chosen non-tested public asking price. Historical calibration dated 04/08/2014 is not current calibration; no completed functional test is recorded. The Infinite Filter 14SX remains an unverified third-party accessory, not a claimed calibrated/matched TSI component. Preserve kit, instrument, historical-calibration-label and filter photos: `IMG_2B67D908-35B9-43D7-A932-42038DC4AB82.jpeg`, `IMG_43F218E7-0F1C-44B0-B93C-770210CCF5CB.jpeg`, `IMG_C7DDB484-78EA-420F-AAD1-452D2DADFC07.jpeg`, `IMG_B3BF9F9B-9403-4822-91FE-6579BE5A3EEB.jpeg`.
+- **Swagelok KPR1DRF412A20000 / BS-SWAG-004 / audit 13012:** Craig confirmed it is not listed. Publication requires an exact live BenchSpec URL and confirmed public asking price; A$649 was provisional, not a live offer. Its package intentionally remains unopened; do not infer factory-sealed condition or pressure testing. Preserve the four timestamped `2026-09-13_16-26-03_AEST_01` through `_04` package/marking photos.
+- These eight originals remain in the timestamped raw-image subfolder. Neither withheld product has a public page, card, sitemap entry, structured offer or purchase action.
+
+### Validation and final state
+
+- `python3 tools/check_site.py` and `python3 tools/check_site.py --publication`: **PASS** for six HTML pages. Internal links/assets, canonical metadata, JSON-LD, visible price/status consistency, available-state behaviour and sitemap membership pass.
+- HTML Validate: **PASS** for all six pages. `xmllint --noout` passes for `site/sitemap.xml`, `site/assets/benchspec-logo.svg` and `site/assets/favicon.svg`. `git diff --check`: **PASS**.
+- Independent editorial/factual checks: **PASS**. Exact identifiers, serials, quantities, offer prices/URLs, specification tables, key safety statements and structured Offer values match the reviewed batch. Perma Pure is the sole intentional source correction: its storage record is now `Kept dry`, with no capped claim. All item copy, metadata and JSON-LD exclude unsupported unused/open-surplus/pre-owned language; published pages contain no TSI or KPR references.
+- Image provenance: **PASS**. The 23 selected preserved raw originals on this branch match the reviewed worktree byte-for-byte. Independent WebP encoding checks pass for all 30 Lot 31 assets (full-size plus 480 px variants); responsive/OG dimensions match the files.
+- Public offer review: **PASS**. The BenchSpec eBay store returned HTTP 200 in Chrome on 25 September and confirmed the exact five URLs, titles and public asking prices recorded above. The site button and JSON-LD URL match each confirmed item.
+- Browser review: **PASS** at 390, 768 and 1440 px for homepage plus every product page. No horizontal overflow or header crowding; all images decode; full-size image and internal links resolve; mailto links, favicon and logo resolve; forward/reverse keyboard navigation, visible focus, skip links and no-JavaScript product navigation pass. Updated captures are ignored local artifacts in `.qa/final-review/`.
+- Sold-state rehearsal: **PASS** independently for every published product on disposable copies. Each permanent product URL returns HTTP 200 with technical content, photos and sitemap retained; visible state/structured availability become Sold/SoldOut; active purchase action and homepage card are removed; last asking price is labelled.
+- Verification-boundary regression: **PASS**, 40 cases across five product pages and both checker modes. Removing the exact visible/structured test boundary, replacing it with a bare `Untested` label or claiming successful testing fails the checker.
+- Scope comparison: **PASS** against `origin/main` at `f8df5ffaf60520e2732c230e975ef6b1d1f0074b`. The branch changes only the four approved pages, their assets/raw originals, homepage/sitemap, factual cross-links, checker/README/work record and necessary editorial updates to the original heater. No TSI/KPR public page, card, sitemap entry, offer or purchase action is present.
+
+Final branch state is ready for commit and push only; it is not merged or deployed.
+
+### Remaining external items
+
+The external Perma Pure eBay title still uses legacy condition terminology. The catalogue uses Craig's corrected observed-condition wording; changing the eBay listing is outside this repository task. No website publication blocker is created by that legacy title.
+
+Hosting, DNS publication, Search Console setup and final pre-launch stock/offer recheck remain separate. No merge or deployment is performed by this batch.
+
+## Historical first-slice record from main
+
+Everything below is retained solely as historical evidence. Its old branch/status, shipping wording and validation statements are not the current batch state; the current record above is authoritative.
 
 Status: first slice implemented with actual-item photographs; **not merged or deployed**. The live eBay offer recheck and separate launch checks remain outstanding. Approved by Craig on 24 September 2026, including the subsequent heading/copy/photo amendments.
 
-Current approved state: the header logo reads **SPECIFIED • VERIFIED** and the heater short condition reads **Used item in very clean physical condition. Visually inspected and verified complete as offered.** Visible copy, metadata, JSON-LD and `CATALOGUE_GUIDE.md` agree. Fresh normal/publication, HTML/XML and responsive/sold-state checks pass with no local validation exception. See “Current approved-state validation” below for the authoritative results. All earlier review/validation sections are historical. Branch: `feat/catalogue-v1`; no merge or deployment.
+Historical approved state: the header logo reads **SPECIFIED • VERIFIED** and the heater short condition reads **Used item in very clean physical condition. Visually inspected and verified complete as offered.** Visible copy, metadata, JSON-LD and `CATALOGUE_GUIDE.md` agree. Fresh normal/publication, HTML/XML and responsive/sold-state checks pass with no local validation exception. See “Historical approved-state validation” below for the authoritative results. All earlier review/validation sections are historical. Branch: `feat/catalogue-v1`; no merge or deployment.
 
 ## Objective and scope
 
@@ -169,7 +252,7 @@ Final validation:
 
 That finalisation was committed and pushed as `f737df78170c3e541144c1b79ab45fc7cb92a82e`. Unused controller originals were left untracked and untouched. No merge to `main`, deployment or DNS changes were included.
 
-## Current approved-state validation — 24 September 2026
+## Historical approved-state validation — 24 September 2026
 
 Reconciled against the latest approved remote revision `8d5c98a`. Its existing commits already supply the “SPECIFIED • VERIFIED” logo, “verified complete as offered” wording on both pages and in descriptive metadata/JSON-LD, and the matching catalogue guide. They were fast-forwarded locally and validated without further website, CSS, asset or tooling edits. The only new repository change in this pass is this reconciled work record.
 
