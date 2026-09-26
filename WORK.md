@@ -1,6 +1,88 @@
 # Work record — catalogue v1
 
-## Current work — first Lot 31 catalogue batch, 24 September 2026
+## Current work — editorial review and image-source correction, 25 September 2026
+
+Scope: a wording-only review of the homepage and all five published product pages, including meta descriptions, Open Graph descriptions and JSON-LD descriptions, before carrying the batch to a clean branch. Work remains local on `feat/catalogue-v1`; no branch transfer, commit, push, merge or deployment is included in this pass. The 24 September batch record below is historical wherever its copy or validation status has been superseded.
+
+Changes: removed redundant caption explanations of per-unit pricing, changed the count to “5 equipment listings”, removed “pre-owned” from descriptions of apparently unused stock, and replaced mechanical inspection fragments with natural technical prose. Positive physical condition leads the verification detail and the specific testing limitation. Shortened repeated purchase/quantity explanations, clarified the controller's manual-and-binder wording and kept descriptions aligned across visible copy and metadata. The existing CRES condition and handling statements remain intact.
+
+MAG-VIEW source rechecked: current `BenchSpec_Lot31_Audit.csv`, blob `a1e0c991f08e95d820e76b3972807234043ef478`, audit 13011, states that the original MVM-Q user's guide is included with the two-meter stock; it does not specify a guide per meter. Visible and JSON-LD wording now says “An original MVM-Q user's guide is included with the stock.” The inclusion heading no longer implies that every meter has a guide. No allocation or extra manual was invented; clarification has been requested separately.
+
+Factual invariants: exact identifiers, ratings, quantities, serial numbers, prices, Offer fields, testing limitations, links, actual photographs and shipping availability are unchanged. The entire structured Product object excluding its editorial description, specification tables, key specifications and visible status/price blocks were compared with commit `05895b6`. CSS, logo/favicon, sitemap, robots and validator are unchanged. No “appears unused” observation has been upgraded into an unsupported new-condition or functional-test claim.
+
+Final validation: normal and publication site checks pass for all six pages; HTML Validate passes; all 40 verification-boundary regression tests pass; `git diff --check` passes. Chrome checks pass on every page at 390 px and 1440 px: no horizontal overflow or header crowding, images and links resolve, keyboard/skip-link navigation works and JavaScript-disabled purchase navigation remains available. All five independent sold-state rehearsals pass, retaining permanent HTTP 200 URLs, technical content, photographs and sitemap entries. Fresh review screenshots are in `.qa/editorial-2026-09-25/`; representative desktop/mobile captures were visually inspected. No new Lighthouse run was performed for these wording-only changes; earlier scores remain historical. Changes remain uncommitted on the existing branch for the subsequent clean-branch step.
+
+### Current photo state: processed replacements applied
+
+Craig updated the descriptively named top-level sources after the renaming pass. The processed Perma Pure, MAG-VIEW and Spirax photographs are now applied to the website: ten selected source images, each with full-size and 480 px WebP outputs (20 changed assets). Unlike the earlier identical-source pass, these replacements visibly change the photographs. The following table is the current source mapping and supersedes the earlier image-source status.
+
+| Source directly in `raw-images/` | Asset under `site/assets/` | Full-size dimensions |
+| --- | --- | --- |
+| `perma-pure-humidifier1-overview.jpeg` | `perma-pure-fc125-240-5mp/overview.webp` | 1215 × 1600 |
+| `perma-pure-humidifier2-serial-011.jpeg` | `perma-pure-fc125-240-5mp/serial-011.webp` | 1253 × 1600 |
+| `perma-pure-humidifier3-serial-010.jpeg` | `perma-pure-fc125-240-5mp/serial-010.webp` | 1380 × 1600 |
+| `perma-pure-humidifier4-pair-alternate.jpeg` | `perma-pure-fc125-240-5mp/pair.webp` | 1096 × 1386 |
+| `mag-view-flowmeter1-overview-processed.jpg` | `mag-view-mvm-050-q/overview.webp` | 1277 × 1600 |
+| `mag-view-flowmeter2-packaged.jpeg` | `mag-view-mvm-050-q/packaged.webp` | 1384 × 1600 |
+| `spirax-trap1-overview.jpeg` | `spirax-sarco-fa-150-71497/overview.webp` | 1191 × 1600 |
+| `spirax-trap2-ratings.jpeg` | `spirax-sarco-fa-150-71497/ratings.webp` | 1509 × 1600 |
+| `spirax-trap3-body.jpeg` | `spirax-sarco-fa-150-71497/body.webp` | 1461 × 1600 |
+| `spirax-trap4-audit-label.jpeg` | `spirax-sarco-fa-150-71497/audit-label.webp` | 1600 × 1380 |
+
+The current Perma Pure pair photograph replaces the previous pair view whose top-level source was removed by the operator. Its alt text now describes the two humidifiers without referring to an audit label absent from the new crop. Homepage/product image dimensions and responsive width descriptors match the replacement files. No product facts, prices, condition/verification prose, eBay destinations, JSON-LD, sitemap, CSS or architecture changed in this photo pass. Heater/controller assets and the existing MAG-VIEW manual asset remain unchanged. No source files were edited, restored from the subfolder or removed by this pass.
+
+Validation: normal/publication site checks, HTML validation, all 40 verification-boundary regressions and `git diff --check` pass. Independent re-encoding confirms all 20 outputs match their current top-level sources. Chrome checks on the homepage and all three affected product pages pass at 390 px and 1440 px: images decode, full-size image links resolve, no horizontal overflow or header crowding. Updated screenshots are in `.qa/updated-photos-2026-09-25/`; desktop Spirax and mobile Perma Pure captures were visually reviewed. These current results supersede the earlier unchanged-image findings below. Work remains local and uncommitted; no push, branch transfer, merge or deployment.
+
+### Historical follow-up: descriptive source filenames
+
+Renamed all 24 image files directly in `raw-images/` to item-based numbered names at Craig's request; the timestamped subfolder is untouched. The map below supersedes top-level filenames in earlier source records while retaining original names for provenance. Image bytes and extensions are preserved. No website assets or pages changed in this rename pass.
+
+Two new processed MAG-VIEW `.jpg` files were present alongside the older `.jpeg` files. Both sets are retained; processed variants are explicitly labelled `-processed`. These newly supplied processed variants have not yet been incorporated into the website. Earlier findings about identical MAG-VIEW sources applied to the older `.jpeg` files, not these new `.jpg` exports.
+
+Validation: SHA-256 comparisons confirm every renamed photo is unchanged, every file in the timestamped subfolder is unchanged, and the entire `site/` tree is unchanged. Normal and publication site checks pass. No commit, push, merge or deployment.
+
+| Current filename in immediate `raw-images/` | Previous filename |
+| --- | --- |
+| `controller1-overview.jpg` | `2026-09-13_16-32-22_AEST_01_IMG_8A225C25-AFCD-46D2-B5C1-6C2F82B73CC8.jpg` |
+| `controller2-interior.jpg` | `2026-09-13_16-32-22_AEST_02_IMG_1841ACFD-E95E-4483-A29F-6F20C927459D.jpg` |
+| `controller3-enclosure.jpg` | `2026-09-13_16-32-22_AEST_03_IMG_32C1F8A3-AE64-49A7-A39F-6D4FF6956111.jpg` |
+| `controller4-manual.jpg` | `2026-09-13_16-33-44_AEST_01_IMG_D620011F-A2EE-48B6-8C4D-2ECA550D937A.jpg` |
+| `heater1-overview.jpg` | `IMG_51F35372-0313-4A4E-B6D3-100239975F70.jpg` |
+| `heater2-nameplate.jpg` | `IMG_4D0A9114-AF7A-4A73-97B1-2A5DD999ABDA.jpg` |
+| `heater3-probe.jpg` | `IMG_D21A390C-ED98-451A-9CAF-58BDF78FC229.jpg` |
+| `heater4-enclosure.jpg` | `IMG_BE5F2EC9-0E18-4230-8E76-CC850EEB452F.jpg` |
+| `mag-view-flowmeter1-overview-processed.jpg` | `2026-09-13_16-22-29_AEST_01_IMG_87737F7E-6927-4AE9-AEA3-B9E47F89C89E.jpg` |
+| `mag-view-flowmeter1-overview.jpeg` | `2026-09-13_16-22-29_AEST_01_IMG_87737F7E-6927-4AE9-AEA3-B9E47F89C89E.jpeg` |
+| `mag-view-flowmeter2-packaged-processed.jpg` | `2026-09-13_16-22-29_AEST_02_IMG_78E6698E-04F4-4730-8441-4E203FAA4431.jpg` |
+| `mag-view-flowmeter2-packaged.jpeg` | `2026-09-13_16-22-29_AEST_02_IMG_78E6698E-04F4-4730-8441-4E203FAA4431.jpeg` |
+| `perma-pure-humidifier1-overview.jpeg` | `2026-09-13_15-44-01_AEST_01_IMG_BA98A548-3187-47A6-AEB5-1C89A1577C78.jpeg` |
+| `perma-pure-humidifier2-serial-011.jpeg` | `2026-09-13_15-44-01_AEST_02_IMG_D6F0E637-AB54-4359-80FE-F8BDBEFE04C5.jpeg` |
+| `perma-pure-humidifier3-serial-010.jpeg` | `2026-09-13_15-44-01_AEST_03_IMG_B06B7882-6A4D-4BE3-A75C-90FFFEC76296.jpeg` |
+| `perma-pure-humidifier4-pair-alternate.jpeg` | `2026-09-13_15-44-01_AEST_04_IMG_A6D85AC7-0069-4BFF-B163-9A0A0027E84E.jpeg` |
+| `perma-pure-humidifier5-pair.jpeg` | `2026-09-13_15-44-01_AEST_05_IMG_56335BA1-6691-4BE7-8FF8-6E12DF451021.jpeg` |
+| `spirax-trap1-overview.jpeg` | `2026-09-13_16-28-38_AEST_01_IMG_C80DAA47-8619-4E69-AAE5-A80C59D7AE70.jpeg` |
+| `spirax-trap2-ratings.jpeg` | `2026-09-13_16-28-38_AEST_02_IMG_179024FD-D66E-4952-874A-C124B8EBAF49.jpeg` |
+| `spirax-trap3-body.jpeg` | `2026-09-13_16-28-38_AEST_03_IMG_1F24E332-4A0E-47C1-A276-55329130A731.jpeg` |
+| `spirax-trap4-audit-label.jpeg` | `2026-09-13_16-28-38_AEST_04_IMG_6126D38B-38A4-4A13-9EB9-BC272153FA11.jpeg` |
+| `swagelok-check-valve1.jpg` | `31002-1.jpg` |
+| `swagelok-check-valve2.jpg` | `31002-2.jpg` |
+| `swagelok-check-valve3.jpg` | `31002-3.jpg` |
+
+### Follow-up: immediate `raw-images/` sources (before descriptive renaming)
+
+Craig supplied the Spirax, MAG-VIEW and Perma Pure photographs directly in this repository's `raw-images/` and instructed that these take precedence over the timestamped subfolder. The selected source filenames are unchanged from the historical provenance table, but their current source directory is now **`raw-images/`**, with no subfolder:
+
+- Perma Pure: `2026-09-13_15-44-01_AEST_01`, `_02`, `_03` and `_05` photographs → overview, serial -011, serial -010 and pair assets.
+- MAG-VIEW: `2026-09-13_16-22-29_AEST_01` and `_02` photographs → overview and packaged assets.
+- Spirax: `2026-09-13_16-28-38_AEST_01` through `_04` photographs → overview, ratings, body and audit-label assets.
+
+The ten selected top-level originals were inspected and compared with their archived counterparts: each is byte-identical, with dimensions 1152 × 1536. Consequently this changes source provenance, not the visual appearance. The supplied files are preserved unchanged outside `site/`; full-size and 480 px WebP assets are re-encoded directly from these top-level sources. The additional Perma Pure `_04` photograph is not needed to duplicate the existing pair view.
+
+Exception: the MAG-VIEW user's-guide photograph (`2026-09-13_16-34-15_AEST_01_IMG_65B55FBA-E478-496A-BB15-75AFE4D26A4A.jpeg`) has not been supplied at the top level. Its existing supporting asset is retained unchanged; it is not represented as a new processed replacement. Controller and heater images already use their approved top-level originals. Editorial changes and all product facts remain intact.
+
+Follow-up validation: all 20 WebP outputs (ten full-size plus ten responsive variants) match independent encodings of the selected top-level source files. They are also byte-identical to the prior deployed assets, so no image dimension, HTML, JSON-LD or CSS change is necessary. Normal/publication site checks, HTML validation and `git diff --check` pass. Fresh Chrome checks on the homepage and all three affected product pages pass at 390 and 1440 px: all images decode, full-size links resolve, and there is no horizontal overflow or header crowding. Refreshed screenshots are in `.qa/raw-image-sources-2026-09-25/`; the desktop trap capture was visually checked. No commit, push or branch transfer was made.
+
+## Historical work — first Lot 31 catalogue batch, 24 September 2026
 
 Status: bounded implementation and validation complete on `feat/catalogue-v1`: four additional product pages, five saleable product pages in total. TSI and Swagelok KPR are withheld because Craig confirmed they are not yet listed on eBay. The containing commit SHA and remote push verification are reported in the handoff. **Not merged or deployed.** This section supersedes the first-slice status and validation records below, which are historical.
 
