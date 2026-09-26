@@ -59,7 +59,7 @@ The live [BenchSpec eBay store](https://www.ebay.com.au/str/benchspec) returned 
 | Infinity Fluids PTC-12-20-1P | BS-INFI-001 / 13014 | 1 | A$1,995 | [198658139207](https://www.ebay.com.au/itm/198658139207) |
 | Perma Pure FC125-240-5MP | BS-PPUR-001 / 31006 | 2 | A$795 each | [198644525062](https://www.ebay.com.au/itm/198644525062) |
 | MAG-VIEW MVM-050-Q | BS-MAGV-001 / 13011 | 2 | A$400 each | [198645719640](https://www.ebay.com.au/itm/198645719640) |
-| Spirax Sarco FA-150 / 71497 | BS-SPIR-001 / 13013 | 1 | A$725 | [198646864549](https://www.ebay.com.au/itm/198646864549) |
+| Spirax Sarco FA-150 / 71497 | BS-SPIR-001 / 13013 | 1 | A$525 | [198646864549](https://www.ebay.com.au/itm/198646864549) |
 
 ### Current photo sources
 
