@@ -9,6 +9,15 @@ Branch: `feat/cres-audit-refinement`, created from current `main`. This bounded 
 - Overall dimensions (approximately 430 × 120 × 150 mm) and weight (approximately 2.8 kg) are now recorded in the page and its structured data. Visible copy, metadata, Open Graph text and Product/Offer JSON-LD agree; Schema.org `UsedCondition`, A$1,495 and eBay item `198659547917` are unchanged.
 - `python3 tools/check_site.py` and `python3 tools/check_site.py --publication`: pass for all 11 HTML pages after the refinement. `git diff --check`: pass. No merge, deployment, DNS or eBay listing change is included.
 
+## Current PTC audit refinement — 27 September 2026
+
+Branch: `feat/ptc-audit-refinement`, created from `main` after the CRES audit refinement. This bounded update revises only the published Infinity Fluids PTC-12-20-1P / BS-INFI-001 controller record and its homepage catalogue summary from the completed BenchSpec audit; it does not alter pricing, eBay destination, photography, layout or unrelated products.
+
+- The record now states the observed exceptionally clean specialist-surplus condition, intact factory wiring and labels, and no evidence of previous field installation, terminal connection or conduit/cable-entry modification.
+- The isolated RKC REX-C100 PID controller was functionally checked for normal power-up, open-sensor detection and Type-K input-channel response at approximately 22 °C ambient; its original wiring was restored after testing. No broader panel or heater-pair test is claimed.
+- Technical specifications now record the 120 V AC supply, FLA 8 A marking, Type-K / 0–400 °C / SSR controller configuration, GOLD SAH4825D relay, Fuji Electric SC-E04 contactor, Eaton B20 breaker, Type-K connection and Wiegmann enclosure. Visible copy, metadata, Open Graph text and Product/Offer JSON-LD agree; Schema.org `UsedCondition`, A$1,995 and eBay item `198658139207` are unchanged.
+- `python3 tools/check_site.py` and `python3 tools/check_site.py --publication`: pass for all 11 HTML pages after the refinement. `git diff --check`: pass. No merge, deployment, DNS or eBay listing change is included.
+
 ## Current batch — Lot 31 follow-on, 25 September 2026
 
 Branch: `feat/lot31-catalogue-batch-2`, created from `origin/main` at `c7d788cb309c979fcc79a1aecc8d5959583837c3`. This deliberately remains a hand-authored static extension; no product-data layer, generator, framework or application script was added.

@@ -128,6 +128,10 @@ def check(root, publication=False):
                 "no loop or zero test has been performed",
                 "no electrical or pressure test has been performed",
             )
+            if rel == "products/infinity-fluids-ptc-12-20-1p/index.html":
+                verification_limits += (
+                    "the rkc rex-c100 pid controller was isolated from the panel and functionally checked",
+                )
             visible_normalised = " ".join(visible.lower().split())
             test_status = " ".join(
                 str(prop.get("value", "")) for prop in data.get("additionalProperty", [])
