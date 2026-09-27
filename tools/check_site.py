@@ -122,6 +122,8 @@ def check(root, publication=False):
                 "functional flow testing has not been performed; both meters remain dry",
                 "wet or pressure testing has not been performed; ports remain capped",
             )
+            if data.get("sku") == "BS-INFI-002":
+                verification_limits += ("the heater has not been energised under process load",)
             visible_normalised = " ".join(visible.lower().split())
             test_status = " ".join(
                 str(prop.get("value", "")) for prop in data.get("additionalProperty", [])
