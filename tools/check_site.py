@@ -119,6 +119,7 @@ def check(root, publication=False):
             # "untested" label. Keep the same explicit disclosure in both places.
             verification_limits = (
                 "functional operation has not been tested under process conditions",
+                "the heater has not been energised under process load",
                 "units have not been dismantled, wetted or pressure-tested",
                 "functional flow testing has not been performed; both meters remain dry",
                 "wet or pressure testing has not been performed; ports remain capped",

@@ -1,5 +1,14 @@
 # Work record — Lot 31 catalogue batch 1
 
+## Current CRES audit refinement — 27 September 2026
+
+Branch: `feat/cres-audit-refinement`, created from current `main`. This bounded update revises only the published Infinity Fluids CRES-ILB-12-0010-K-XP-PTC / BS-INFI-002 heater record and its homepage catalogue summary from the completed BenchSpec audit; it does not alter the price, eBay destination, photographs, layout or other products.
+
+- The record now states the observed clean specialist-surplus condition, the approximately 15 Ω heater-element measurement, protective-earth continuity, isolation from heater conductors to earth by standard multimeter, and verified Type-K thermocouple continuity and temperature response.
+- The specific process boundary is retained in its current audited form: the heater has not been energised under process load; Infinity specifies appropriate liquid/gas flow and control conditions for powered operation. The matching PTC controller remains a separate offer and has not been operated with the heater under process conditions.
+- Overall dimensions (approximately 430 × 120 × 150 mm) and weight (approximately 2.8 kg) are now recorded in the page and its structured data. Visible copy, metadata, Open Graph text and Product/Offer JSON-LD agree; Schema.org `UsedCondition`, A$1,495 and eBay item `198659547917` are unchanged.
+- `python3 tools/check_site.py` and `python3 tools/check_site.py --publication`: pass for all 11 HTML pages after the refinement. `git diff --check`: pass. No merge, deployment, DNS or eBay listing change is included.
+
 ## Current batch — Lot 31 follow-on, 25 September 2026
 
 Branch: `feat/lot31-catalogue-batch-2`, created from `origin/main` at `c7d788cb309c979fcc79a1aecc8d5959583837c3`. This deliberately remains a hand-authored static extension; no product-data layer, generator, framework or application script was added.
