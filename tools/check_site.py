@@ -127,6 +127,7 @@ def check(root, publication=False):
                 "no pressure or calibration test has been performed",
                 "no loop or zero test has been performed",
                 "no electrical or pressure test has been performed",
+                "this was a functional response test. the matching tsi factory calibration certificate is dated 8 april 2014",
             )
             if rel == "products/infinity-fluids-ptc-12-20-1p/index.html":
                 verification_limits += (

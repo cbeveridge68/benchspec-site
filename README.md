@@ -2,7 +2,7 @@
 
 Small, hand-authored catalogue for specialist technical equipment and parts. Production origin: **https://benchspec.com.au**. Purchases take place on eBay.
 
-The catalogue includes the original Infinity Fluids CRES inline heater and four additional Lot 31 products: the Infinity PTC controller, Perma Pure humidifier, MAG-VIEW flow meter and Spirax Sarco drain trap. Actual-item photographs are included. TSI 4140D and Swagelok KPR remain unpublished until their exact eBay listings exist. The branch remains unmerged and undeployed; evidence, item-specific blockers and separate launch checks are recorded in [WORK.md](WORK.md).
+The catalogue contains eleven available-equipment pages, including the TSI 4140D thermal mass flow meter kit and the original Lot 31 process, flow, pressure and high-purity equipment. Actual-item photographs are included throughout. Swagelok KPR remains unpublished until its exact eBay listing exists. Evidence, item-specific blockers and separate launch checks are recorded in [WORK.md](WORK.md).
 
 ## Preview and check
 

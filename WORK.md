@@ -1,5 +1,15 @@
 # Work record — Lot 31 catalogue batch 1
 
+## Current TSI 4140D catalogue addition — 2 October 2026
+
+- Added the permanent `/products/tsi-4140d/` page and homepage entry for TSI 4140D / 4100 Series thermal mass flow meter kit, BenchSpec reference `BS-TSI-001`, audit 13021, serial 41401415012.
+- The exact supplied eBay destination `https://www.ebay.com.au/itm/198681454259` was matched on the public BenchSpec storefront to the title “TSI 4140D Thermal Mass Flow Meter 0.01-20 L/min Kit Calibration Cert” and current A$750 asking price. The catalogue records one available unit and keeps current delivery, returns and warranty terms on eBay.
+- Product facts and verification wording follow the completed 27 September audit in `../bs-ops`: 0.01–20 Std L/min, air/oxygen/nitrogen, 1/4-inch tube connections, power-up and basic clean-air response at approximately 0.009 Std L/min with no intentional flow and approximately 2.67 Std L/min with low-pressure clean air. The visible condition wording records this as a functional response test and dates the matching TSI factory calibration certificate to 8 April 2014.
+- Range, calibrated gases and connection size were cross-checked against TSI's official Model 4140 product page and 4140/4143 operation manual. The catalogue does not convert historical manufacturer accuracy specifications into a current accuracy claim for this item.
+- The matching TSI factory certificate is dated 8 April 2014 and recalibration was due April 2015. The page does not claim current calibrated accuracy. Craig confirmed on 2 October 2026 that the compatible 7.5 V DC, 1 A centre-positive power supply used for audit power-up is included; it is identified as non-original and is now recorded consistently in the visible inclusions and structured product description.
+- The three operator-selected actual-item photographs from `/Users/craigbeveridge/Evo/BenchSpec/Lot031/TSI 4140/` were preserved under `raw-images/tsi-4140d/` and converted into full-size and 480 px WebP assets. They show the instrument front, rear identity/serial and powered airflow response. No additional audit, stock or generated images are used.
+- `python3 tools/check_site.py` and `python3 tools/check_site.py --publication` pass for all 12 HTML pages. The new product route and primary image both return HTTP 200 from the local static server; page-specific title, Open Graph fields and eBay destination were confirmed in the served HTML. Sitemap XML, JSON-LD parsing, preserved-source checks and `git diff --check` pass. No deployment or eBay change is included.
+
 ## Current CRES audit refinement — 27 September 2026
 
 Branch: `feat/cres-audit-refinement`, created from current `main`. This bounded update revises only the published Infinity Fluids CRES-ILB-12-0010-K-XP-PTC / BS-INFI-002 heater record and its homepage catalogue summary from the completed BenchSpec audit; it does not alter the price, eBay destination, photographs, layout or other products.
