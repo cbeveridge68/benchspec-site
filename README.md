@@ -2,7 +2,7 @@
 
 Small, hand-authored catalogue for specialist technical equipment and parts. Production origin: **https://benchspec.com.au**. Purchases take place on eBay.
 
-The catalogue contains eleven available-equipment pages, including the TSI 4140D thermal mass flow meter kit and the original Lot 31 process, flow, pressure and high-purity equipment. Actual-item photographs are included throughout. Swagelok KPR remains unpublished until its exact eBay listing exists. Evidence, item-specific blockers and separate launch checks are recorded in [WORK.md](WORK.md).
+The catalogue contains ten available-equipment pages, plus the retained sold record for the TSI 4140D thermal mass flow meter kit. The original Lot 31 process, flow, pressure and high-purity equipment remains available. Actual-item photographs are included throughout. Swagelok KPR remains unpublished until its exact eBay listing exists. Evidence, item-specific blockers and separate launch checks are recorded in [WORK.md](WORK.md).
 
 ## Preview and check
 
@@ -41,7 +41,7 @@ The approved shipping wording is **Stock in Melbourne, Australia · Ready for in
 - Keep its product directory, URL, canonical URL, photographs, specifications and condition evidence. Keep the URL in the sitemap and serve it with HTTP 200; do not redirect it to the homepage or add `noindex`.
 - Change the visible stock text to **Sold** and `offers.availability` to `https://schema.org/SoldOut`.
 - Remove the active `purchase` link and buying instructions. Clearly label the retained price **Last asking price**; it is not a new offer to sell. Preserve the existing eBay URL inside the unavailable Offer as provenance, not as a purchase button.
-- Remove the card from the current-stock homepage and update the count. If no items remain, replace the listing with “No equipment is currently listed. Please check back.”
+- Remove the card from the current-stock homepage and update the count. A retained homepage catalogue card must sit in a clearly separate sold-equipment section and link only to the permanent BenchSpec record. If no items remain, replace the available listing with “No equipment is currently listed. Please check back.”
 - Update the review date and any availability wording in metadata, including item-specific shipping readiness. Run the checks and verify the old URL still returns HTTP 200.
 
 ## Separate launch step

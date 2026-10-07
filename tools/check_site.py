@@ -149,9 +149,14 @@ def check(root, publication=False):
                 require("Available" in visible, prefix + "available status missing")
                 require(len(purchase) == 1 and purchase[0].get("href") == offer.get("url"), prefix + "purchase/Offer URL mismatch")
             elif offer.get("availability") == "https://schema.org/SoldOut":
-                require("Sold" in visible and not purchase, prefix + "sold page retains purchase action or lacks sold status")
+                offer_links = [a for a in page.select("a") if a.get("href") == offer.get("url")]
+                require("Sold" in visible and "Last asking price" in visible,
+                        prefix + "sold page lacks sold status or last asking price label")
+                require(not purchase and not offer_links, prefix + "sold page retains active purchase action")
                 homepage = pages[root / "index.html"]
-                require(not any(a.get("href") == route for a in homepage.select("a")), prefix + "sold item remains in current stock")
+                homepage_links = [a for a in homepage.select("a") if a.get("href") == route]
+                require(all("sold-item-link" in a.get("class", "").split() for a in homepage_links),
+                        prefix + "sold item remains in current stock")
             else:
                 require(False, prefix + "unknown availability")
     sitemap = ET.parse(root / "sitemap.xml")

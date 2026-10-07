@@ -334,3 +334,9 @@ Fresh validation results:
 - Updated screenshots: `.qa/approved-final-state/homepage-desktop.png`, `homepage-mobile.png`, `product-desktop.png` and `product-mobile.png`, with tablet captures alongside. These remain ignored local review artifacts outside `site/`. No new Lighthouse run was requested or performed for this confirmation pass; all earlier Lighthouse scores above are explicitly historical.
 
 The containing validation-record commit is on `feat/catalogue-v1`; the final SHA and remote verification are reported in the handoff. Unused controller originals remain untracked and untouched. No merge, deployment or DNS changes. Remaining launch checks are unchanged under “Unresolved items”.
+
+## TSI 4140D sold-state update — 7 October 2026
+
+- Marked TSI 4140D / BS-TSI-001 as sold following operator confirmation. The permanent product page, technical record, photographs and sitemap entry remain in place.
+- Changed structured availability to `SoldOut`, removed the active eBay purchase link and buying instructions, retained A$750 as the clearly labelled last asking price, and kept the former eBay URL only in the unavailable structured Offer as provenance.
+- Moved the TSI card out of the available-equipment list into a separate sold-equipment catalogue section and reduced the available count to 10.
