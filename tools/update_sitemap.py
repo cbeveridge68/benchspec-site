@@ -14,7 +14,7 @@ class PageMetadata(HTMLParser):
         self.path = path
         self.canonicals = []
         self.review_dates = []
-        self.feed(path.read_text())
+        self.feed(path.read_text(encoding="utf-8"))
 
     def handle_starttag(self, tag, attrs):
         attrs = dict(attrs)
@@ -62,7 +62,7 @@ def render(entries):
 def main(root):
     entries = sitemap_entries(root)
     target = root / "sitemap.xml"
-    target.write_text(render(entries))
+    target.write_text(render(entries), encoding="utf-8")
     product_count = sum(1 for _, review_date in entries if review_date)
     print(f"WROTE: {target} ({len(entries)} URLs; {product_count} product lastmod dates)")
 
