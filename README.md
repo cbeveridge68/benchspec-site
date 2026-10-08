@@ -15,11 +15,12 @@ python3 -m http.server 8765 --bind 127.0.0.1 --directory site
 Open http://127.0.0.1:8765/. Root-relative URLs require a web server rather than opening HTML files directly.
 
 ```sh
+python3 tools/update_sitemap.py
 python3 tools/check_site.py
 python3 tools/check_site.py --publication
 ```
 
-The dependency-free checker verifies internal links/assets, metadata, JSON-LD consistency and sitemap membership. The `--publication` check additionally fails on missing actual-item imagery and explicit publication blockers. It does not replace HTML conformance validation, browser checks, Google Rich Results Test or factual review. Acceptance evidence and outstanding launch items are in [WORK.md](WORK.md).
+`update_sitemap.py` rebuilds the sitemap from the canonical catalogue pages and copies each product page's explicit **Catalogue reviewed** date into `<lastmod>`. It intentionally omits `<lastmod>` for pages that do not carry a trustworthy review date rather than inventing one. The dependency-free checker verifies internal links/assets, metadata, JSON-LD consistency and sitemap membership. The `--publication` check additionally fails on missing actual-item imagery and explicit publication blockers. It does not replace HTML conformance validation, browser checks, Google Rich Results Test or factual review. Acceptance evidence and outstanding launch items are in [WORK.md](WORK.md).
 
 ## Maintain a product
 
@@ -32,8 +33,8 @@ The approved shipping wording is **Stock in Melbourne, Australia · Ready for in
 1. Start from the matching physical audit and current pricing record in `cbeveridge68/erpnext-ops`. Record source revision, audit reference, selected photographs and offer evidence in the work record. Only completed tests support testing claims. Keep negotiation targets/floors and other private operating information out of the site.
 2. Copy the existing product HTML into a permanent, lowercase manufacturer/model/MPN directory under `site/products/`. This is an editing pattern, not a template engine. Do not reuse another product's identifiers, claims, price, images or eBay link.
 3. Use photographs of the actual item. Preserve selected source originals under `raw-images/`, outside the web root. Place optimised images under `site/assets/`, provide full-resolution image links, dimensions, alt text and responsive sizes. Never substitute stock or generated pictures. WORK.md identifies the selected originals for each product; controller photographs are not heater imagery.
-4. Update title, H1, description, canonical URL, social metadata, JSON-LD and visible content together. Include known specifications, condition/test limits, inclusions and Melbourne location. State what has been identified, visually inspected and functionally tested, if anything, and any specific material limitation. Do not enumerate hypothetical untested scenarios unless directly relevant to safe use or accurate representation. Omit optional unknown dimensions/weight. Offer price/currency/status must match the visible page and current listing; never publish guessed values or placeholder destinations.
-5. Add the product to the homepage and sitemap. Homepage cards always link to BenchSpec product pages. Update the available-equipment count.
+4. Update title, H1, description, canonical URL, social metadata, JSON-LD and visible content together. Include known specifications, condition/test limits, inclusions and Melbourne location. State what has been identified, visually inspected and functionally tested, if anything, and any specific material limitation. Do not enumerate hypothetical untested scenarios unless directly relevant to safe use or accurate representation. Omit optional unknown dimensions/weight. Offer price/currency/status must match the visible page and current listing; never publish guessed values or placeholder destinations. Keep the visible **Catalogue reviewed** date current when the page is materially updated.
+5. Add the product to the homepage and update the available-equipment count. Run `python3 tools/update_sitemap.py`; do not hand-maintain sitemap membership or product `<lastmod>` dates.
 6. Run the checker, HTML validator and browser checks. Check the destination listing belongs to BenchSpec and matches the exact item. There is no automatic price or stock synchronisation; repeat these checks when listing facts change and immediately before publication.
 
 ## When an item sells
@@ -42,7 +43,7 @@ The approved shipping wording is **Stock in Melbourne, Australia · Ready for in
 - Change the visible stock text to **Sold** and `offers.availability` to `https://schema.org/SoldOut`.
 - Remove the active `purchase` link and buying instructions. Clearly label the retained price **Last asking price**; it is not a new offer to sell. Preserve the existing eBay URL inside the unavailable Offer as provenance, not as a purchase button.
 - Remove the card from the current-stock homepage and update the count. A retained homepage catalogue card must sit in a clearly separate sold-equipment section and link only to the permanent BenchSpec record. If no items remain, replace the available listing with “No equipment is currently listed. Please check back.”
-- Update the review date and any availability wording in metadata, including item-specific shipping readiness. Run the checks and verify the old URL still returns HTTP 200.
+- Update the review date and any availability wording in metadata, including item-specific shipping readiness. Run `python3 tools/update_sitemap.py`, then run the checks and verify the old URL still returns HTTP 200.
 
 ## Separate launch step
 
