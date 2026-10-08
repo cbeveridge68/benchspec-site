@@ -1,5 +1,10 @@
 # Work record — Lot 31 catalogue batch 1
 
+## Swagelok SS-DLTW4 price update — 9 October 2026
+
+- Updated the operator-approved public asking price for Swagelok SS-DLTW4 / BS-SWAG-001 from A$399 to A$349 per unit.
+- Applied the new price consistently to the homepage card, product metadata, Open Graph description, visible offer and structured Offer. Quantity, availability, eBay destination, photography and condition record are unchanged.
+
 ## Current TSI 4140D catalogue addition — 2 October 2026
 
 - Added the permanent `/products/tsi-4140d/` page and homepage entry for TSI 4140D / 4100 Series thermal mass flow meter kit, BenchSpec reference `BS-TSI-001`, audit 13021, serial 41401415012.
