@@ -127,6 +127,7 @@ def check(root, publication=False):
                 "no pressure or calibration test has been performed",
                 "no loop or zero test has been performed",
                 "no electrical or pressure test has been performed",
+                "no pressure or flow test has been performed; the unit has not been dismantled",
                 "this was a functional response test. the matching tsi factory calibration certificate is dated 8 april 2014",
             )
             if rel == "products/infinity-fluids-ptc-12-20-1p/index.html":
@@ -139,9 +140,12 @@ def check(root, publication=False):
                 if prop.get("name") == "Test status"
             )
             test_normalised = " ".join(test_status.lower().split())
-            require(any(limit in visible_normalised and limit in test_normalised
-                        for limit in verification_limits),
-                    prefix + "specific visible/structured verification limits missing or inconsistent")
+            # Operator-directed exception: the Parker PPS1 page publishes only
+            # the affirmative visual verification record, without a test-limit statement.
+            if rel != "products/parker-pps1-1c1-rwl/index.html":
+                require(any(limit in visible_normalised and limit in test_normalised
+                            for limit in verification_limits),
+                        prefix + "specific visible/structured verification limits missing or inconsistent")
             for url in data.get("image", []):
                 require(url.startswith(ORIGIN + "/") and (root / urlsplit(url).path.lstrip("/")).is_file(), prefix + "invalid structured image: " + url)
             purchase = [a for a in page.select("a") if "purchase" in a.get("class", "").split()]

@@ -1,5 +1,23 @@
 # Work record — Lot 31 catalogue batch 1
 
+## Parker PPS1-1C1-RWL catalogue addition — 10 October 2026
+
+- Added `/products/parker-pps1-1c1-rwl/` and the corresponding available-equipment card for Parker PPS1-1C1-RWL / `BS-PARK-001`, audit 13019.
+- The operator supplied the live eBay destination `https://www.ebay.com.au/itm/198702628622` and screenshots confirming the BenchSpec listing title, used condition, one available unit and A$129 asking price. Transaction-specific postage, delivery, returns and warranty terms remain on eBay.
+- Identity and physical observations are grounded in the 10 October audit: exact MPN PPS1-1C1-RWL, 3–10 PSI range, 250 PSI maximum-pressure marking, integral leads and capped process connection. At the operator's explicit direction, the public page records the affirmative visual verification only and omits a functional-test limitation; this is a documented exception to the catalogue guide and the site's otherwise general verification-limit check.
+- Configuration details were cross-checked against the supplied live listing and PPS1 product data: rising-pressure actuation, SPDT contacts, 1/4 inch NPT male connection, 18-inch leads, 6 PSI factory calibration setting, ±1 PSI or 5% tolerance, 10–20% deadband, 3 A at 125 V AC / 2 A at 30 V DC resistive rating and −40°C to 105°C operating range.
+- The single actual-item audit photograph was copied unchanged to `raw-images/parker-pps1-1c1-rwl/`. Full-resolution and 480 px responsive WebP files were encoded without retouching, generated imagery or substitute photography.
+
+## Parker Finite S1R-6C04-023 catalogue addition — 10 October 2026
+
+- Added `/products/parker-finite-s1r-6c04-023/` and the corresponding available-equipment card for Parker Finite S1R-6C04-023 / `BS-PARK-002`, audit 13022.
+- The operator supplied the live eBay destination `https://www.ebay.com.au/itm/198702527053` and screenshots confirming the BenchSpec listing title, used condition, one available unit and A$449 asking price. Purchase, current delivery, returns and warranty terms remain on eBay.
+- Product identity and condition are grounded in the 10 October audit under `../bs-ops`: exact MPN S1R-6C04-023, body marking 14SX, 5000 PSIG label, capped ports, very clean condition, measured 120 × 70 × 70 mm size and 530 g weight. The page states the completed visual checks and the specific boundary that no pressure or flow test was performed and the unit was not dismantled.
+- Manufacturer configuration facts were cross-checked against Parker's official high-pressure-filter catalogue and the live listing: 316 stainless construction, 1/4 inch NPT ports, Grade 6 C-media element, 04-023 element size, fluorocarbon seals and 350°F maximum temperature for the C-media configuration.
+- All four actual-item audit photographs were copied unchanged to `raw-images/parker-finite-s1r-6c04-023/`. Full-resolution WebP files were encoded at quality 86 and 480 px responsive variants at quality 82; no retouching, generated imagery or substitute photography was used.
+- Replaced the lower-end and upper-port web assets after the operator updated audit photographs 003 and 004 with tighter square crops. The raw copies, full-resolution WebP files, responsive variants and declared image dimensions were updated together; the overview and label photographs were unchanged.
+- Removed “excluding postage” from every catalogue price label. BenchSpec now states the item price only and directs buyers to eBay for current transaction-specific postage and delivery terms; it does not characterise postage as free, included, excluded or separately charged.
+
 ## Swagelok SS-DLTW4 price update — 9 October 2026
 
 - Updated the operator-approved public asking price for Swagelok SS-DLTW4 / BS-SWAG-001 from A$399 to A$349 per unit.

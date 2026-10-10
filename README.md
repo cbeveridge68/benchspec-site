@@ -2,7 +2,7 @@
 
 Small, hand-authored catalogue for specialist technical equipment and parts. Production origin: **https://benchspec.com.au**. Purchases take place on eBay.
 
-The catalogue contains ten available-equipment pages, plus the retained sold record for the TSI 4140D thermal mass flow meter kit. The original Lot 31 process, flow, pressure and high-purity equipment remains available. Actual-item photographs are included throughout. Swagelok KPR remains unpublished until its exact eBay listing exists. Evidence, item-specific blockers and separate launch checks are recorded in [WORK.md](WORK.md).
+The catalogue contains twelve available-equipment pages, plus the retained sold record for the TSI 4140D thermal mass flow meter kit. The original Lot 31 process, flow, pressure, filtration and high-purity equipment remains available. Actual-item photographs are included throughout. Swagelok KPR remains unpublished until its exact eBay listing exists. Evidence, item-specific blockers and separate launch checks are recorded in [WORK.md](WORK.md).
 
 ## Preview and check
 
@@ -28,7 +28,7 @@ Follow [CATALOGUE_GUIDE.md](CATALOGUE_GUIDE.md) for the approved catalogue wordi
 
 For Lot 31, the operator's 25 September corrections take precedence over older source wording: describe observed physical condition, then verification and the specific testing boundary. Do not infer an unused history from appearance; stronger new/unused/sealed claims require clear audit and photographic evidence. Perma Pure FC125-240-5MP units are not capped: record only their dry condition and the absence of dismantling, wetting or pressure testing. Spirax retains its documented protective caps.
 
-The approved shipping wording is **Stock in Melbourne, Australia · Ready for international shipping**, or **Ready for international shipping from Melbourne, Australia.** This supersedes the guide's older enquiry wording for these catalogue items. Do not imply that shipping is free or included; transaction-specific terms remain on eBay.
+The approved shipping wording is **Stock in Melbourne, Australia · Ready for international shipping**, or **Ready for international shipping from Melbourne, Australia.** This supersedes the guide's older enquiry wording for these catalogue items. Do not describe postage as free, included, excluded or separately charged on BenchSpec; transaction-specific postage and delivery terms remain on eBay.
 
 1. Start from the matching physical audit and current pricing record in `cbeveridge68/erpnext-ops`. Record source revision, audit reference, selected photographs and offer evidence in the work record. Only completed tests support testing claims. Keep negotiation targets/floors and other private operating information out of the site.
 2. Copy the existing product HTML into a permanent, lowercase manufacturer/model/MPN directory under `site/products/`. This is an editing pattern, not a template engine. Do not reuse another product's identifiers, claims, price, images or eBay link.
