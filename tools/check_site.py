@@ -52,6 +52,12 @@ def check(root, publication=False):
 
     pages = {p: Page(p) for p in root.rglob("*.html")}
     require(bool(pages), "No HTML pages found")
+    homepage = pages.get(root / "index.html")
+    require(homepage is not None, "Homepage missing")
+    if homepage is not None:
+        stores = [data for data in homepage.jsonld
+                  if data.get("@type") == "OnlineStore" and data.get("@id") == ORIGIN + "/#store"]
+        require(len(stores) == 1, "Homepage needs one persistent BenchSpec OnlineStore entity")
     canonicals = set()
     descriptions = set()
     for path, page in pages.items():
@@ -111,6 +117,8 @@ def check(root, publication=False):
             require(offer.get("@type") == "Offer", prefix + "Offer missing")
             require(offer.get("priceCurrency") == "AUD", prefix + "unexpected currency")
             require(float(offer.get("price", 0)) > 0, prefix + "price missing")
+            require(offer.get("seller") == {"@id": ORIGIN + "/#store"},
+                    prefix + "Offer seller does not reference the BenchSpec store")
             price = float(offer.get("price", 0))
             amount = f"A${price:,.0f}" if price.is_integer() else f"A${price:,.2f}"
             require(amount in visible, prefix + "visible/structured price mismatch")
@@ -157,7 +165,6 @@ def check(root, publication=False):
                 require("Sold" in visible and "Last asking price" in visible,
                         prefix + "sold page lacks sold status or last asking price label")
                 require(not purchase and not offer_links, prefix + "sold page retains active purchase action")
-                homepage = pages[root / "index.html"]
                 homepage_links = [a for a in homepage.select("a") if a.get("href") == route]
                 require(all("sold-item-link" in a.get("class", "").split() for a in homepage_links),
                         prefix + "sold item remains in current stock")
