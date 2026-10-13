@@ -28,7 +28,7 @@ Stock may include:
 
 The core differentiator is:
 
-**precise identification, full specification, clearly stated condition, and explicit verification boundaries.**
+**precise identification, full specification, clearly stated condition, and evidence-based verification.**
 
 Do not imply that every item is refurbished or fully function-tested.
 
@@ -91,19 +91,9 @@ Lead with what BenchSpec knows.
 
 Good short-form pattern:
 
-> Used item in very clean physical condition. Visually inspected and verified complete as offered.
+> Used item in very clean physical condition. Tested and operating normally as described below.
 
-Then, where relevant, explain the verification boundary:
-
-> BenchSpec has confirmed the model, ratings, included components and visible condition. Functional operation has not been tested under process conditions.
-
-Prefer this style over:
-
-> Untested. No claim of verified operation is made.
-
-Do not use "untested" as the primary item identity unless it is materially necessary.
-
-Do not imply failure merely because a functional test was not practical.
+Do not use "untested" as the primary item identity when meaningful inspection or partial testing has been completed.
 
 Distinguish clearly between:
 
@@ -112,31 +102,40 @@ Distinguish clearly between:
 3. functional testing;
 4. calibration, where relevant.
 
-State only the actual verification performed.
+State the tests actually performed and their results in plain language.
+
+## Negative statements
+
+Buyer-facing copy should describe **known facts**, not imagined failure modes.
+
+Negative wording is appropriate when it records something specific and real, such as:
+
+- observed damage or wear;
+- a missing component;
+- an actual failed or negative test result;
+- a known material exclusion;
+- expired calibration where calibration status matters;
+- a specific safety limitation.
+
+Do not add speculative negatives about what might be wrong, might fail, might be incompatible, or might not meet performance that was never measured.
+
+Do not automatically publish every `NOT PERFORMED` audit line. A positive, scoped test statement usually defines the verification boundary sufficiently.
+
+Only state an unperformed-test limitation where omitting it would materially mislead a reasonable technical buyer about what BenchSpec verified.
 
 ## Verification boundaries
 
-Do not enumerate hypothetical things BenchSpec has not tested.
+Keep any necessary limitations specific and useful, not defensive.
 
-Avoid statements such as:
+For example, where a measurement instrument has an expired calibration certificate, that is a known material fact and should be stated.
 
-> Compatibility with a particular controller or process installation has not been verified.
+For safety-critical electrical equipment, state specific voltage or connection limitations when relevant.
 
-unless there is a specific, material compatibility issue relevant to the item.
+Avoid generic wording such as:
 
-Instead, state the actual test boundary.
+> No claim of operation is made.
 
-Example:
-
-> Functional operation has not been tested under process conditions.
-
-Safety-critical limitations may be stated where relevant.
-
-Example:
-
-> 120 V equipment. Do not connect directly to Australian 230 V mains. Functional testing requires appropriate fluid flow and control conditions.
-
-Keep warnings specific and useful.
+or broad compatibility disclaimers that are not tied to a known issue.
 
 ## Product photography
 
@@ -275,29 +274,27 @@ Use the approved `site/assets/benchspec-logo.svg` in the header, rendered white 
 
 Do:
 
-> Used item in very clean physical condition. Visually inspected and verified complete as offered.
-
-> BenchSpec has confirmed the model, ratings, included components and visible condition. Functional operation has not been tested under process conditions.
+> Very clean used condition. Tested at 24 V DC with the supplied controller and operating normally.
 
 Don't:
 
-> Untested
+> Untested. No claim of verified operation is made.
 
-> Operation has not been verified.
-
-> No claim of verified operation is made.
-
-### Compatibility
+### Negative findings
 
 Do:
 
-> Functional testing requires appropriate fluid flow and control conditions.
+> Connector housing has a small crack at the latch; connection remains secure.
+
+> Unit powered on but did not complete startup.
 
 Don't:
 
-> Compatibility with any particular controller or process installation has not been verified.
+> Pressure performance was not tested and may not meet specification.
 
-unless there is a specific known compatibility concern.
+> Compatibility with other controllers has not been verified.
+
+unless there is a specific known compatibility issue that matters to the offered item.
 
 ### Brand tone
 
@@ -320,8 +317,8 @@ Before publishing or updating a page, confirm:
 - stock status is current;
 - international shipping wording is accurate;
 - condition wording leads with known facts;
-- functional-test limitations are specific;
-- no speculative compatibility disclaimer has been added;
+- negative statements describe specific known facts rather than speculative possibilities;
+- unperformed tests are mentioned only when omission would materially mislead;
 - safety warnings are specific and necessary;
 - warranty/returns wording is accurate;
 - internal commercial information is absent;
@@ -336,7 +333,6 @@ Before publishing or updating a page, confirm:
 When in doubt:
 
 **state what BenchSpec has confirmed, not everything it has not.**
-
 
 ## Public contact and business identity
 
