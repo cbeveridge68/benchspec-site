@@ -136,6 +136,7 @@ def check(root, publication=False):
                 "no loop or zero test has been performed",
                 "no electrical or pressure test has been performed",
                 "no pressure or flow test has been performed; the unit has not been dismantled",
+                "no calibrated pressure, vacuum or airflow performance test has been performed",
                 "this was a functional response test. the matching tsi factory calibration certificate is dated 8 april 2014",
             )
             if rel == "products/infinity-fluids-ptc-12-20-1p/index.html":

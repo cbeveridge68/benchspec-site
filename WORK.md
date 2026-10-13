@@ -363,3 +363,13 @@ The containing validation-record commit is on `feat/catalogue-v1`; the final SHA
 - Marked TSI 4140D / BS-TSI-001 as sold following operator confirmation. The permanent product page, technical record, photographs and sitemap entry remain in place.
 - Changed structured availability to `SoldOut`, removed the active eBay purchase link and buying instructions, retained A$750 as the clearly labelled last asking price, and kept the former eBay URL only in the unavailable structured Offer as provenance.
 - Moved the TSI card out of the available-equipment list into a separate sold-equipment catalogue section and reduced the available count to 10.
+
+# Thomas 118ZC20/24UV pump + SK604530 controller page — 14 October 2026
+
+- Added `/products/thomas-118zc20-24uv/` and the corresponding available-equipment card for the consolidated Thomas / Gardner Denver pump and controller assembly, BenchSpec reference `BS-THOM-001`, combined audit 31007.
+- Product identity, condition and functional-test wording are grounded in the completed 12 October audit under `../bs-ops`: pump model / MPN `118ZC20/24UV`, 24 V DC / 4.5 A pump rating, trace `DT/SR0314 00000022`, supplied `SK604530` controller, controller board marking `ZETEX 5-7025 REV0` and sticker `48150-60C 20AMP`.
+- The page records the completed paired test: the supplied controller operated this pump from a current-limited 24 V DC bench supply, approximately 3 A available was required for reliable startup and unloaded current settled at approximately 1.5 A. The specific boundary is retained: no calibrated pressure, vacuum or airflow performance test was performed. No external power supply is included.
+- Current commercial facts are A$449, one assembly available and live eBay item `198712188998`. The former controller record `BS-THOM-002` is not presented as a separate saleable item.
+- All five buyer-facing actual-item photographs from the audit record were copied unchanged to `raw-images/thomas-118zc20-24uv/` and converted to full-resolution and 480 px WebP assets without retouching, cropping, generated imagery or substitute photography.
+- Added page-scoped long-identifier wrapping and a two-column mobile gallery for the four supporting photographs. At a measured 390 px viewport, document and body widths remain 390 px with no overflowing elements; the full-page mobile capture and 1440 px desktop capture were visually reviewed.
+- `python3 tools/check_site.py` and `python3 tools/check_site.py --publication` pass for all 15 HTML pages. The new route, lead image and responsive image return HTTP 200 from the local server, the sitemap and SVG assets parse with `xmllint`, and `git diff --check` passes.
