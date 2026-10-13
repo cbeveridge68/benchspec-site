@@ -55,7 +55,23 @@ Avoid copying audit language such as:
 - `no obvious burnt components, damaged connectors or other visible electrical damage` unless a specific observed defect comparison is genuinely useful to the buyer;
 - routine statements listing performance characteristics that were not measured.
 
-A clearly described test often defines its own scope. Do not automatically add a negative sentence about pressure, vacuum, flow, calibration or other unmeasured characteristics simply because the audit records that boundary. Include a test limitation on the public page only when omitting it could reasonably cause a technical buyer to over-read the claim.
+## Negative statements
+
+Buyer-facing copy should be evidence-led, not defensive.
+
+Use negative wording when it describes a **specific known fact** that matters to the buyer, for example:
+
+- visible damage or a missing component;
+- an actual failed or negative test result;
+- a known material exclusion;
+- an expired calibration status where calibration matters;
+- a specific safety limitation.
+
+Do **not** introduce speculative negative statements about things that might be wrong, might fail, might be incompatible or were simply not investigated. Do not turn every unperformed audit test into a public disclaimer.
+
+A clearly scoped positive statement normally defines the verification boundary. For example, `Tested at 24 V DC and operating normally unloaded` does not require an added sentence listing pressure, vacuum or flow measurements that were not taken.
+
+Only surface an unperformed-test boundary when omitting it would materially mislead a reasonable technical buyer about what BenchSpec verified.
 
 Do not repeat the same verification in the summary, condition section and technical section unless each occurrence serves a distinct purpose.
 
@@ -92,8 +108,6 @@ A good pattern for a tested industrial component is:
 `Very clean used condition. Tested at 24 V DC with the supplied controller and operating normally.`
 
 `The pump starts normally, draws approximately 3 A at startup and settles at approximately 1.5 A running unloaded.`
-
-Only add a verification-boundary sentence when it materially prevents an overclaim that the positive wording would otherwise imply. Do not add routine `not measured` statements merely to mirror the audit.
 
 Do not reproduce every visual inspection observation from the audit unless it materially helps a buyer assess the item.
 
@@ -137,7 +151,7 @@ Ask:
 - Is any sentence merely restating another sentence?
 - Has formal audit phrasing leaked into the public page?
 - Are the useful test results easy to understand?
-- Is any limitation actually needed, or is it present only because the audit recorded it?
+- Is any negative statement a specific known fact, or is it speculative/defensive?
 - Could any buyer-facing claim be traced back to the Ops audit or documented product evidence?
 
 If not, simplify the copy before publishing.
