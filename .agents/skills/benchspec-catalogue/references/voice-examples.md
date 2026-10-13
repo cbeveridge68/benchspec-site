@@ -18,17 +18,15 @@ Problems:
 - `no obvious burnt components...` is inspection-report language;
 - `no abnormal behaviour reported` is passive and procedural;
 - `approximately 3 A available was required` is awkward;
-- the final limitation is more formal than necessary.
+- the final negative test statement is unnecessary here because the positive wording already says exactly what was tested.
 
 ### Preferred catalogue wording
 
 > Very clean used condition. Supplied with the matching SK604530 controller and wiring harness.
 >
 > Tested together at 24 V DC and operating normally. The pump starts at approximately 3 A and settles at approximately 1.5 A running unloaded.
->
-> Pressure, vacuum and flow performance were not independently measured.
 
-This keeps every material fact inside the audit boundary while sounding like a specialist seller rather than a test report.
+This stays inside the audit boundary while sounding like a specialist seller rather than a test report. The wording describes the completed test without turning every unperformed test into buyer-facing copy.
 
 ### Short top-of-page summary
 
@@ -52,13 +50,15 @@ Catalogue:
 
 > Tested and operating normally unloaded.
 
-Audit-style:
+Audit boundary:
 
-> No suitable gauges / calibrated flow equipment available.
+> Pressure / vacuum / calibrated airflow test: NOT PERFORMED.
 
-Catalogue:
+Catalogue, normally:
 
-> Pressure, vacuum and flow performance were not independently measured.
+> Omit it when the public wording already makes the actual test scope clear.
+
+Only surface a negative test boundary when omitting it could reasonably mislead a technical buyer about what BenchSpec verified.
 
 Audit-style:
 
