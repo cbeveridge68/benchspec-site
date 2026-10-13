@@ -45,8 +45,7 @@ The audit is evidence, not copy. Translate verified facts into concise technical
 Prefer:
 
 - `Very clean used condition. Tested at 24 V DC with the supplied controller and operating normally.`
-- `The pump starts normally, draws about 3 A at startup and settles at about 1.5 A running with the ports open.`
-- `Pressure, vacuum and flow performance were not independently measured.`
+- `The pump starts normally, draws about 3 A at startup and settles at about 1.5 A running unloaded.`
 
 Avoid copying audit language such as:
 
@@ -54,7 +53,9 @@ Avoid copying audit language such as:
 - `continuous unloaded operation confirmed`;
 - `visual identity / condition check passed`;
 - `no obvious burnt components, damaged connectors or other visible electrical damage` unless a specific observed defect comparison is genuinely useful to the buyer;
-- long lists of things that were not tested.
+- routine statements listing performance characteristics that were not measured.
+
+A clearly described test often defines its own scope. Do not automatically add a negative sentence about pressure, vacuum, flow, calibration or other unmeasured characteristics simply because the audit records that boundary. Include a test limitation on the public page only when omitting it could reasonably cause a technical buyer to over-read the claim.
 
 Do not repeat the same verification in the summary, condition section and technical section unless each occurrence serves a distinct purpose.
 
@@ -84,7 +85,7 @@ Keep it concise. Avoid a second miniature audit.
 
 Use natural prose, normally one or two short paragraphs.
 
-State the strongest defensible condition first. Then describe the completed test in plain technical language. Retain a verification boundary only where a buyer might otherwise over-read the test.
+State the strongest defensible condition first. Then describe the completed test in plain technical language.
 
 A good pattern for a tested industrial component is:
 
@@ -92,7 +93,7 @@ A good pattern for a tested industrial component is:
 
 `The pump starts normally, draws approximately 3 A at startup and settles at approximately 1.5 A running unloaded.`
 
-`Pressure, vacuum and flow performance were not independently measured.`
+Only add a verification-boundary sentence when it materially prevents an overclaim that the positive wording would otherwise imply. Do not add routine `not measured` statements merely to mirror the audit.
 
 Do not reproduce every visual inspection observation from the audit unless it materially helps a buyer assess the item.
 
@@ -136,7 +137,7 @@ Ask:
 - Is any sentence merely restating another sentence?
 - Has formal audit phrasing leaked into the public page?
 - Are the useful test results easy to understand?
-- Is any limitation defensive or unnecessarily broad?
+- Is any limitation actually needed, or is it present only because the audit recorded it?
 - Could any buyer-facing claim be traced back to the Ops audit or documented product evidence?
 
 If not, simplify the copy before publishing.
