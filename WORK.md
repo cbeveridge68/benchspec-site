@@ -373,3 +373,9 @@ The containing validation-record commit is on `feat/catalogue-v1`; the final SHA
 - All five buyer-facing actual-item photographs from the audit record were copied unchanged to `raw-images/thomas-118zc20-24uv/` and converted to full-resolution and 480 px WebP assets without retouching, cropping, generated imagery or substitute photography.
 - Added page-scoped long-identifier wrapping and a two-column mobile gallery for the four supporting photographs. At a measured 390 px viewport, document and body widths remain 390 px with no overflowing elements; the full-page mobile capture and 1440 px desktop capture were visually reviewed.
 - `python3 tools/check_site.py` and `python3 tools/check_site.py --publication` pass for all 15 HTML pages. The new route, lead image and responsive image return HTTP 200 from the local server, the sitemap and SVG assets parse with `xmllint`, and `git diff --check` passes.
+
+## Thomas buyer-positioning revision — 14 October 2026
+
+- Reworked the Thomas page and homepage entry around its buyer-relevant identity as a specialist OEM 24 V BLDC gas diaphragm pressure/vacuum pump for precision gas-handling, sampling and instrumentation systems. Exact `118ZC20/24UV` and `SK604530` identifiers remain prominent throughout.
+- Added exact-model Thomas catalogue performance data referenced by the durable Ops record: 25.8 L/min pressure free flow, 26.6 L/min vacuum free flow, 1.4 bar continuous / 2.1 bar intermittent maximum pressure and approximately −810 mbar maximum vacuum. These values are clearly labelled as manufacturer data and are not represented as BenchSpec measurements.
+- Rebuilt the visible description, SEO metadata and Product JSON-LD together. BenchSpec's completed functional check remains separate and affirmative: pump and supplied controller tested together at 24 V DC and operating normally, with approximately 3 A startup and 1.5 A unloaded running current.
