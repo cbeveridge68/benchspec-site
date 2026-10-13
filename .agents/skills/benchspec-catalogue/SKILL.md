@@ -15,13 +15,16 @@ For every product page, identify the corresponding durable item record in `cbeve
 
 Use this precedence:
 
-1. `benchspec-ops` `audit.md` for identity, physical condition, configuration, inclusions, completed tests and test boundaries;
+1. `benchspec-ops` `audit.md` for identity, product positioning/context, physical condition, configuration, inclusions, completed tests and test boundaries;
 2. manufacturer/product documentation explicitly recorded or referenced by the audit for technical specifications;
-3. `benchspec-ops` `pricing.md` for the current internal pricing decision when relevant to page preparation;
-4. the live selling channel for current public price, availability, delivery, returns and transaction terms;
-5. the existing site page only as the current presentation state.
+3. `benchspec-ops` `listing.md` for the current approved sale-unit wording/data where useful;
+4. `benchspec-ops` `pricing.md` for the current internal pricing decision when relevant to page preparation;
+5. the live selling channel for current public price, availability, delivery, returns and transaction terms;
+6. the existing site page only as the current presentation state.
 
-Do not infer, embellish or strengthen a claim beyond the Ops audit. If the audit and site disagree, fix the site or flag the conflict; do not silently rewrite the audit from the site.
+Do not infer, embellish or strengthen a claim beyond the Ops evidence. If the audit and site disagree, fix the site or flag the conflict; do not silently rewrite the audit from the site.
+
+Do not introduce new manufacturer specifications into a site page from ad-hoc web research. New technical facts should first be established in the durable Ops record. If a useful specification is not in Ops, omit it from the site rather than improvising it.
 
 If no durable Ops record can be found, stop and flag that before publishing material factual claims.
 
@@ -32,9 +35,105 @@ Before editing a product page, read:
 - `AGENTS.md`;
 - `CATALOGUE_GUIDE.md`;
 - the corresponding `benchspec-ops` `audit.md`;
+- the corresponding Ops `listing.md` when present;
 - `pricing.md` if present and relevant;
 - retained actual-item images / image notes;
 - the current product page, if one exists.
+
+## Autonomous completion loop
+
+Do not treat the first generated page as finished. Complete the following loop without asking Craig to arbitrate normal wording or presentation choices.
+
+### Pass 1 — evidence map
+
+Before changing HTML, build a temporary internal evidence map from the durable sources. It is working state only and does not need to be committed.
+
+Capture:
+
+- exact identity / MPN / variant;
+- sale unit and included components;
+- product class and positioning terms supported by the audit;
+- manufacturer-backed specifications;
+- observed condition;
+- completed functional tests and their results;
+- specific known defects / exclusions / safety facts, if any;
+- public price / availability / quantity;
+- approved actual-item images.
+
+Every numeric technical claim intended for the page must be traceable to this evidence map. If a number cannot be traced, do not publish it.
+
+### Pass 2 — buyer-facing draft
+
+Create or revise the page from the evidence map, not by copying the audit prose.
+
+The first visible screen should work for both kinds of buyer:
+
+1. someone searching the exact manufacturer/model/MPN; and
+2. someone searching by equipment class, application or technical need who does not yet know the exact part.
+
+Where the audit contains product positioning/context, carry the useful class/application terms into the H1, subheading, catalogue card or opening copy naturally. Do not manufacture marketing adjectives such as `premium`, `rare` or `high-value`.
+
+### Pass 3 — factual QA
+
+Re-read the completed visible page, metadata and structured data against the evidence map.
+
+Check every:
+
+- model / MPN;
+- technical number;
+- performance figure;
+- electrical rating;
+- condition claim;
+- test claim;
+- inclusion / exclusion;
+- price / availability statement.
+
+Remove or correct anything that is not supported by the durable sources.
+
+Pay particular attention to plausible-looking numbers. A technically plausible figure is still wrong if it is not the supported figure for this exact item/variant.
+
+### Pass 4 — editorial QA
+
+Read the page as a technical buyer rather than as its author.
+
+Check that:
+
+- the exact part identity is obvious;
+- the generic equipment class / application is also obvious where supported;
+- the page explains why the item is technically relevant without sales hype;
+- audit/test-report phrasing has not leaked into public copy;
+- the same fact is not repeated across card, hero, condition and technical sections without purpose;
+- negative statements describe known facts, not speculative possibilities;
+- routine unperformed tests have not become public disclaimers;
+- condition prose sounds natural and confident;
+- headings and specification labels use buyer language rather than internal workflow language.
+
+Rewrite until these checks pass.
+
+### Pass 5 — visual QA
+
+When local render/browser/screenshot tooling is available, render the changed page and inspect it before finishing.
+
+Check at least:
+
+- desktop layout;
+- mobile layout where practical;
+- H1 wrapping and hierarchy;
+- lead-image crop / orientation;
+- card-to-detail consistency;
+- price / availability prominence;
+- technical-table readability;
+- thumbnail captions and image order.
+
+Fix visible presentation problems rather than reporting them back for Craig to resolve.
+
+### Pass 6 — final consistency pass
+
+Compare the catalogue card, product page, SEO title/meta and structured data one final time. They must describe the same product, positioning, price, condition and availability.
+
+Only consider the task complete after the factual, editorial and visual passes are clean.
+
+Ask Craig only when there is a genuine unresolved source conflict, a material business decision, or missing information that cannot safely be omitted. Do not ask for approval of routine wording choices that can be resolved by this skill.
 
 ## Core writing rule
 
@@ -85,6 +184,8 @@ Confirm manufacturer, exact model/MPN, variant and BenchSpec reference from Ops.
 
 Keep exact searchable identifiers in the page title, H1, visible specification block, meta description and structured data where appropriate.
 
+Also surface supported equipment-class / application language so the page is discoverable by buyers who know the need but not the exact part number.
+
 Do not shorten exact identifiers merely for visual neatness.
 
 ### 3. Write the top summary
@@ -92,6 +193,7 @@ Do not shorten exact identifiers merely for visual neatness.
 The top summary should answer quickly:
 
 - what the item is;
+- what technical class/application it serves, where supported;
 - the important included configuration;
 - the strongest useful verification result.
 
@@ -148,12 +250,13 @@ Before finishing, read the visible product copy as a technical buyer would.
 Ask:
 
 - Does this sound like a human specialist rather than an audit report?
+- Can both an exact-part buyer and a category/application buyer understand the item quickly?
 - Is any sentence merely restating another sentence?
 - Has formal audit phrasing leaked into the public page?
 - Are the useful test results easy to understand?
 - Is any negative statement a specific known fact, or is it speculative/defensive?
-- Could any buyer-facing claim be traced back to the Ops audit or documented product evidence?
+- Could every technical claim be traced back to the Ops audit or documented product evidence?
 
-If not, simplify the copy before publishing.
+If not, simplify or correct the copy before publishing.
 
 For wording examples, read `references/voice-examples.md`.
