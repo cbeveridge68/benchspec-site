@@ -380,3 +380,10 @@ The containing validation-record commit is on `feat/catalogue-v1`; the final SHA
 - Added exact-model Thomas catalogue performance data referenced by the durable Ops record: 25.8 L/min pressure free flow, 26.6 L/min vacuum free flow, 1.4 bar continuous / 2.1 bar intermittent maximum pressure and approximately −810 mbar maximum vacuum. These values are clearly labelled as manufacturer data and are not represented as BenchSpec measurements.
 - Rebuilt the visible description, SEO metadata and Product JSON-LD together. BenchSpec's completed functional check remains separate and affirmative: pump and supplied controller tested together at 24 V DC and operating normally, with approximately 3 A startup and 1.5 A unloaded running current.
 - Recovered the five edited sale photographs from the live eBay listing data after the Ops working copies had reverted. Restored that exact gallery to the Ops audit record, regenerated the catalogue WebP assets from the recovered full-resolution files, and updated intrinsic dimensions for the new crops.
+
+# Allen-Bradley 1783-BMS20CL Stratix 5700 page — 14 October 2026
+
+- Added `/products/allen-bradley-1783-bms20cl/` and the corresponding available-equipment card for the individually audited Unit 1 switch, serial `FDO2713JDL4`, SKU `BS-AB-1783-BMS20CL`.
+- Grounded identity, configuration, condition and test claims in Ops audit `5025-3037070`: Series A, 2023 manufacture, LANLITE software, fitted power/alarm terminal blocks, normal startup, successful Device Manager access, all 18 RJ45 copper interfaces passing link/data testing, and factory reset after testing. The SFP interfaces are specifically identified as outside the completed test scope.
+- Published the current A$495 asking price and live eBay destination `198714140303` consistently across visible copy and Product structured data.
+- Copied the four approved Unit 1 actual-item images unchanged into `raw-images/allen-bradley-1783-bms20cl/` and generated full-resolution and 480 px WebP catalogue assets.
