@@ -108,7 +108,7 @@ The live [BenchSpec eBay store](https://www.ebay.com.au/str/benchspec) returned 
 | --- | --- | --- | --- | --- |
 | Infinity Fluids CRES-ILB-12-0010-K-XP-PTC | BS-INFI-002 / 13020 | 1 | A$1,495 | [198659547917](https://www.ebay.com.au/itm/198659547917) |
 | Infinity Fluids PTC-12-20-1P | BS-INFI-001 / 13014 | 1 | A$1,995 | [198658139207](https://www.ebay.com.au/itm/198658139207) |
-| Perma Pure FC125-240-5MP | BS-PPUR-001 / 31006 | 2 | A$795 each | [198644525062](https://www.ebay.com.au/itm/198644525062) |
+| Perma Pure FC125-240-5MP | BS-PPUR-001 / 31006 | 2 | A$745 each | [198644525062](https://www.ebay.com.au/itm/198644525062) |
 | MAG-VIEW MVM-050-Q | BS-MAGV-001 / 13011 | 2 | A$400 each | [198645719640](https://www.ebay.com.au/itm/198645719640) |
 | Spirax Sarco FA-150 / 71497 | BS-SPIR-001 / 13013 | 1 | A$525 | [198646864549](https://www.ebay.com.au/itm/198646864549) |
 
@@ -380,6 +380,12 @@ The containing validation-record commit is on `feat/catalogue-v1`; the final SHA
 - Added exact-model Thomas catalogue performance data referenced by the durable Ops record: 25.8 L/min pressure free flow, 26.6 L/min vacuum free flow, 1.4 bar continuous / 2.1 bar intermittent maximum pressure and approximately −810 mbar maximum vacuum. These values are clearly labelled as manufacturer data and are not represented as BenchSpec measurements.
 - Rebuilt the visible description, SEO metadata and Product JSON-LD together. BenchSpec's completed functional check remains separate and affirmative: pump and supplied controller tested together at 24 V DC and operating normally, with approximately 3 A startup and 1.5 A unloaded running current.
 - Recovered the five edited sale photographs from the live eBay listing data after the Ops working copies had reverted. Restored that exact gallery to the Ops audit record, regenerated the catalogue WebP assets from the recovered full-resolution files, and updated intrinsic dimensions for the new crops.
+
+# Perma Pure FC125-240-5MP price update — 15 October 2026
+
+- Revised the public asking price from A$795 to A$745 per unit by operator direction.
+- Kept quantity, availability, eBay item `198644525062`, photographs, condition wording and verification boundary unchanged.
+- Updated the homepage card, visible product offer, descriptive metadata, Product structured data and sitemap review date together.
 
 # Allen-Bradley 1783-BMS20CL Stratix 5700 page — 14 October 2026
 
