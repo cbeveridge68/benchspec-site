@@ -88,7 +88,16 @@ p + p { margin-top: 1rem; }
 .kpr-product .offer,
 .kpr-product .key-specs > div,
 .kpr-product .product-details,
-.kpr-product .detail-section { min-width: 0; overflow-wrap: anywhere; }
+.kpr-product .detail-section,
+.domel-product .product-heading,
+.domel-product .product-heading h1,
+.domel-product .product-heading .caption,
+.domel-product .product-overview,
+.domel-product .product-photos,
+.domel-product .offer,
+.domel-product .key-specs > div,
+.domel-product .product-details,
+.domel-product .detail-section { min-width: 0; overflow-wrap: anywhere; }
 .product-overview { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 48px; align-items: start; }
 .product-photos a { display: block; }
 .main-photo img { width: 100%; aspect-ratio: 1; object-fit: contain; background: var(--surface); }
@@ -151,7 +160,7 @@ td { overflow-wrap: anywhere; }
   .product-overview { gap: 30px; }
   .product-details { margin-top: 34px; padding-bottom: 40px; }
   .gallery { gap: 12px; }
-  .thomas-product .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .thomas-product .gallery, .domel-product .gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .footer-inner { flex-wrap: wrap; gap: 10px; }
   th { width: 42%; padding-right: 14px; }
 }

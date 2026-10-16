@@ -137,6 +137,7 @@ def check(root, publication=False):
                 "no electrical or pressure test has been performed",
                 "no pressure or flow test has been performed; the unit has not been dismantled",
                 "the clear protective package remains unopened; pressure and leak performance have not been checked",
+                "briefly operated together from 230 v ac; the blower started immediately and produced substantial airflow",
                 "tested together at 24 v dc and operating normally",
                 "all 18 rj45 copper interfaces passed link and data-communication testing",
                 "this was a functional response test. the matching tsi factory calibration certificate is dated 8 april 2014",

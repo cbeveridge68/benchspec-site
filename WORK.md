@@ -401,3 +401,12 @@ The containing validation-record commit is on `feat/catalogue-v1`; the final SHA
 - Described the unused-surplus condition and preserved unopened packaging positively, with the specific verification boundary recorded naturally. Published A$449 and eBay item `198721206357` consistently in visible copy and Product structured data.
 - Copied both approved actual-item photographs unchanged from the canonical Ops audit record and generated full-resolution and 480 px WebP catalogue assets.
 - Reviewed the complete page at 1440 px desktop and 390 px mobile. Added page-scoped long-identifier wrapping after the initial mobile review; the corrected page measures 390 px viewport and 390 px document width with no overflowing elements. Both catalogue validators, publication mode, XML parsing and diff checks pass.
+
+# Domel 497.3.230 EC blower + 497.2.358-3 controller page — 17 October 2026
+
+- Added `/products/domel-497-3-230/` and an available-equipment card for the consolidated Domel blower/controller assembly, audit 13015 / SKU `BS-DOME-001`.
+- Positioned the assembly as a 230 V brushless EC radial blower for industrial airflow, vacuum and process-air applications while retaining exact blower `497.3.230` and controller `497.2.358-3 v.G` identifiers.
+- Published the A$549 asking price and eBay item `198721243497`. Manufacturer data is clearly identified: 1100 W, 64.7 L/s maximum airflow, 23.4 kPa sealed vacuum, 135 mm diameter and 1.2 kg blower mass.
+- Described BenchSpec's completed check naturally: the supplied blower and controller were briefly operated together from 230 V AC; the blower started immediately and produced substantial airflow. The specific open-PCB electrical-safety boundary is retained without expanding into speculative warnings.
+- Copied the five actual-item images present in the canonical Ops folder unchanged and generated full-resolution and 480 px WebP assets. The sixth audit-reserved filename was not present and is not represented on the site.
+- Reviewed the complete page and catalogue card at 1440 px desktop and 390 px mobile. The mobile document and viewport both measure 390 px with no overflowing elements; image order, identifier wrapping, offer prominence and technical-table readability are clean.
