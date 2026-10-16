@@ -394,6 +394,11 @@ The containing validation-record commit is on `feat/catalogue-v1`; the final SHA
 - Published the current A$495 asking price and live eBay destination `198714140303` consistently across visible copy and Product structured data.
 - Copied the four approved Unit 1 actual-item images unchanged into `raw-images/allen-bradley-1783-bms20cl/` and generated full-resolution and 480 px WebP catalogue assets.
 
+## Allen-Bradley 1783-BMS20CL quantity update — 17 October 2026
+
+- Revised public availability from one to three units by operator direction, sold individually at A$495 each.
+- Updated the homepage card, visible product offer, meta/OG descriptions and Product Offer inventory level together. Kept the serial-specific photographs, condition and completed test record explicitly scoped to the audited 2023 unit shown.
+
 # Swagelok KPR1DRF412A20000 pressure regulator page — 17 October 2026
 
 - Added `/products/swagelok-kpr1drf412a20000/` and an available-equipment card for the Swagelok KPR Series pressure-reducing regulator, audit 13023 / SKU `BS-SWAG-004`.
