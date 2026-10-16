@@ -79,7 +79,16 @@ p + p { margin-top: 1rem; }
 .thomas-product .product-overview,
 .thomas-product .product-photos,
 .thomas-product .offer,
-.thomas-product .key-specs > div { min-width: 0; overflow-wrap: anywhere; }
+.thomas-product .key-specs > div,
+.kpr-product .product-heading,
+.kpr-product .product-heading h1,
+.kpr-product .product-heading .caption,
+.kpr-product .product-overview,
+.kpr-product .product-photos,
+.kpr-product .offer,
+.kpr-product .key-specs > div,
+.kpr-product .product-details,
+.kpr-product .detail-section { min-width: 0; overflow-wrap: anywhere; }
 .product-overview { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 48px; align-items: start; }
 .product-photos a { display: block; }
 .main-photo img { width: 100%; aspect-ratio: 1; object-fit: contain; background: var(--surface); }

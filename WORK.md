@@ -393,3 +393,11 @@ The containing validation-record commit is on `feat/catalogue-v1`; the final SHA
 - Grounded identity, configuration, condition and test claims in Ops audit `5025-3037070`: Series A, 2023 manufacture, LANLITE software, fitted power/alarm terminal blocks, normal startup, successful Device Manager access, all 18 RJ45 copper interfaces passing link/data testing, and factory reset after testing. The SFP interfaces are specifically identified as outside the completed test scope.
 - Published the current A$495 asking price and live eBay destination `198714140303` consistently across visible copy and Product structured data.
 - Copied the four approved Unit 1 actual-item images unchanged into `raw-images/allen-bradley-1783-bms20cl/` and generated full-resolution and 480 px WebP catalogue assets.
+
+# Swagelok KPR1DRF412A20000 pressure regulator page — 17 October 2026
+
+- Added `/products/swagelok-kpr1drf412a20000/` and an available-equipment card for the Swagelok KPR Series pressure-reducing regulator, audit 13023 / SKU `BS-SWAG-004`.
+- Positioned the item for instrumentation and process pressure-control searches while retaining the exact `KPR1DRF412A20000` identifier prominently. Published current manufacturer exact-part data including 316 stainless construction, 0–25 psig outlet range, 3600 psig maximum inlet, 1/4 in female NPT ports and 0.06 Cv.
+- Described the unused-surplus condition and preserved unopened packaging positively, with the specific verification boundary recorded naturally. Published A$449 and eBay item `198721206357` consistently in visible copy and Product structured data.
+- Copied both approved actual-item photographs unchanged from the canonical Ops audit record and generated full-resolution and 480 px WebP catalogue assets.
+- Reviewed the complete page at 1440 px desktop and 390 px mobile. Added page-scoped long-identifier wrapping after the initial mobile review; the corrected page measures 390 px viewport and 390 px document width with no overflowing elements. Both catalogue validators, publication mode, XML parsing and diff checks pass.
