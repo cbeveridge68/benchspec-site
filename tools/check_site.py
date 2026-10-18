@@ -140,6 +140,7 @@ def check(root, publication=False):
                 "briefly operated together from 230 v ac; the blower started immediately and produced substantial airflow",
                 "tested together at 24 v dc and operating normally",
                 "all 18 rj45 copper interfaces passed link and data-communication testing",
+                "this verification confirms powered startup and tcp/ip access to the adapter diagnostics; no commissioned plc i/o session was performed",
                 "this was a functional response test. the matching tsi factory calibration certificate is dated 8 april 2014",
             )
             if rel == "products/infinity-fluids-ptc-12-20-1p/index.html":

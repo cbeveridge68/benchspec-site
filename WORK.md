@@ -1,5 +1,15 @@
 # Work record — Lot 31 catalogue batch 1
 
+## Allen-Bradley 1794-AENT/B catalogue addition — 18 October 2026
+
+- Added `/products/allen-bradley-1794-aent-fw4004/` and the corresponding available-equipment card for the factory-labelled FW 4.004 group, SKU `BS-AB-1794-AENT-B-4004`, audit `5038-3037070-FW4004`.
+- The page is grounded in the durable Ops audit and listing record: Allen-Bradley / Rockwell Automation `1794-AENT`, Series B, factory firmware label 4.004, single 10/100 Mbps RJ45 EtherNet/IP interface, support for up to eight FLEX I/O modules, 24 V DC input and five interchangeable 2022-production units sold individually.
+- eBay item `198723735784` was matched to the listing notification for “Allen-Bradley 1794-AENT FLEX I/O EtherNet/IP…”. The notification confirms the listing went live on 18 October 2026; quantity 5 and sale-unit treatment follow the completed Ops record. Craig subsequently set the current public asking price to A$299 per unit. Current delivery, returns and warranty terms remain on eBay.
+- Condition and verification copy records clean used condition, factory reset, 24 V DC power-up and successful per-unit access to the built-in Rockwell web diagnostics over Ethernet. The page states the material boundary that this was not a commissioned PLC I/O session.
+- Four retained actual-item sources from the Ops record were copied unchanged under `raw-images/allen-bradley-1794-aent-fw4004/` and encoded as full-size and 480 px responsive WebP assets: two front views, one Series B / FW 4.004 label view and one representative Rockwell diagnostic capture. No stock or generated imagery is used.
+- Homepage card, detail page, SEO metadata, Product/Offer structured data, eBay destination, A$299 per-unit price and five-unit availability agree. The sitemap now contains 19 URLs. Both normal and publication site checks, sitemap/SVG XML parsing and `git diff --check` pass.
+- Desktop and 390 px mobile renders of the homepage and detail page were visually reviewed in installed browsers. H1 wrapping, image treatment, gallery captions, offer prominence and the mobile technical table are clean. This release changes the catalogue only; it does not modify the eBay listing.
+
 ## Parker PPS1-1C1-RWL catalogue addition — 10 October 2026
 
 - Added `/products/parker-pps1-1c1-rwl/` and the corresponding available-equipment card for Parker PPS1-1C1-RWL / `BS-PARK-001`, audit 13019.
