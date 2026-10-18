@@ -1,5 +1,11 @@
 # Work record — Lot 31 catalogue batch 1
 
+## Infinity Fluids PTC-12-20-1P price update — 18 October 2026
+
+- Updated the operator-approved public asking price for Infinity Fluids PTC-12-20-1P / `BS-INFI-001` from A$1,995 to A$1,595.
+- Applied the new price consistently to the homepage card, product meta description, visible offer and structured Offer. Quantity, availability, eBay destination, photography, technical details and condition record are unchanged.
+- Updated the catalogue review date and sitemap last-modified date to 18 October 2026. This release changes the catalogue only; it does not modify the eBay listing.
+
 ## Allen-Bradley 1794-AENT/B catalogue addition — 18 October 2026
 
 - Added `/products/allen-bradley-1794-aent-fw4004/` and the corresponding available-equipment card for the factory-labelled FW 4.004 group, SKU `BS-AB-1794-AENT-B-4004`, audit `5038-3037070-FW4004`.
