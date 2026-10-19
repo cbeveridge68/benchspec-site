@@ -1,5 +1,11 @@
 # Work record — Lot 31 catalogue batch 1
 
+## Parker Finite S1R-6C04-023 price update — 19 October 2026
+
+- Updated the operator-approved public asking price for Parker Finite S1R-6C04-023 / `BS-PARK-002` from A$449 to A$349.
+- Applied the new price consistently to the homepage card, product metadata, visible offer and structured Offer. Quantity, availability, eBay destination, photography, technical details and condition record are unchanged.
+- Updated the catalogue review date and sitemap last-modified date to 19 October 2026. This change affects the catalogue only; it does not modify eBay item `198702527053`.
+
 ## Infinity Fluids PTC-12-20-1P price update — 18 October 2026
 
 - Updated the operator-approved public asking price for Infinity Fluids PTC-12-20-1P / `BS-INFI-001` from A$1,995 to A$1,595.
