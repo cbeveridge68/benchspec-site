@@ -10,6 +10,7 @@ from pathlib import Path
 from urllib.parse import unquote, urljoin, urlsplit
 
 ORIGIN = "https://benchspec.com.au"
+ZARAZ_LOADER = "/cdn-cgi/zaraz/i.js"
 
 
 class Page(HTMLParser):
@@ -85,7 +86,14 @@ def check(root, publication=False):
             descriptions.add(desc[0]["content"])
         ids = [a["id"] for _, a in page.tags if "id" in a]
         require(len(ids) == len(set(ids)), prefix + "duplicate IDs")
-        require(all(a.get("type") == "application/ld+json" and "src" not in a for a in page.select("script")), prefix + "application script present")
+        scripts = page.select("script")
+        require(all(
+            (a.get("type") == "application/ld+json" and "src" not in a)
+            or (a.get("src") == ZARAZ_LOADER and a.get("referrerpolicy") == "origin")
+            for a in scripts
+        ), prefix + "unexpected application script present")
+        require(len(page.select("script", src=ZARAZ_LOADER, referrerpolicy="origin")) == 1,
+                prefix + "expected one Cloudflare Zaraz loader")
         for tag, attrs in page.tags:
             if tag == "img":
                 require(bool(attrs.get("alt")), prefix + "image needs descriptive alt text")
@@ -95,6 +103,10 @@ def check(root, publication=False):
             for url in urls:
                 parsed = urlsplit(urljoin(expected, url))
                 if parsed.netloc != "benchspec.com.au":
+                    continue
+                # Cloudflare serves the first-party Zaraz loader at the edge; it
+                # is deliberately absent from the static site tree.
+                if parsed.path == ZARAZ_LOADER:
                     continue
                 target = root / unquote(parsed.path).lstrip("/")
                 if parsed.path.endswith("/"):
