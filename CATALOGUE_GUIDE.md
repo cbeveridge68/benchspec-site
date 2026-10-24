@@ -70,7 +70,7 @@ Sound like a knowledgeable seller speaking directly to a buyer, **not** a lab re
 - **Avoid internal language.** Do not carry phrases like `audited batch`, `recorded sale configuration`, `verification boundary`, `disposition` or `hardware-revision grouping` into customer copy.
 - **Avoid unnecessarily formal technical phrases.** Use normal product terms for identification and specifications, but don't write `safety-function validation`, `externally intact` or similar when a simpler accurate phrase exists.
 - **Don't explain what buyers already know.** Use one brief opening description rather than a general article about the technology.
-- **Don't be defensive.** Describe completed checks plainly. Include specific, material limits where needed for an honest sale, particularly safety-related equipment, without an exhaustive list of things not tested.
+- **Don't be defensive.** Describe completed checks plainly and stop. A precise positive description of a power-on check is sufficient; do not append a sentence about functionality or safety functions not being tested just because they were not tested. Still disclose actual faults, material exclusions, and specific safety issues where required for an accurate and lawful sale.
 - **Don't repeat yourself.** Condition, quantity, inclusions and tests should each have one clear home on the page.
 
 **Voice test:** Would this sound normal if BenchSpec told a technically competent buyer about the part in two sentences? If not, simplify it. Factual accuracy and material disclosures still take precedence over brevity.
@@ -138,7 +138,7 @@ Negative wording is appropriate when it records something specific and real, suc
 
 Do not add speculative negatives about what might be wrong, might fail, might be incompatible, or might not meet performance that was never measured.
 
-Do not automatically publish every `NOT PERFORMED` audit line. A positive, scoped test statement usually defines the verification boundary sufficiently.
+Do not automatically publish every `NOT PERFORMED` audit line. **A positive, scoped test statement stands on its own.** For example: `Used, in good physical condition. Powered on at 24 V DC with status LEDs checked.` Do **not** follow it with `Safety functions have not been tested.` The second sentence adds a negative that is already clear from the first. The same rule applies to other unperformed tests.
 
 Only state an unperformed-test limitation where omitting it would materially mislead a reasonable technical buyer about what BenchSpec verified.
 
@@ -339,7 +339,7 @@ Before publishing or updating a page, confirm:
 - internal revision/date/origin tracking is omitted unless relevant to the sale;
 - condition wording leads with known facts;
 - negative statements describe specific known facts rather than speculative possibilities;
-- unperformed tests are mentioned only when omission would materially mislead;
+- no routine `not tested` sentence follows a clear positive test statement (including for safety modules); exceptions must address a specific material disclosure, not the mere absence of a test;
 - safety warnings are specific and necessary;
 - warranty/returns wording is accurate;
 - internal commercial information is absent;
