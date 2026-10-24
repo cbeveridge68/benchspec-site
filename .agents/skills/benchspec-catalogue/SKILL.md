@@ -100,7 +100,8 @@ Check that:
 
 - the exact part identity is obvious;
 - the generic equipment class / application is also obvious where supported;
-- the page explains why the item is technically relevant without sales hype;
+- the equipment type is obvious without a lengthy explanation of how it is used;
+- the wording sounds like BenchSpec selling the item, not writing an audit or manufacturer's brochure;
 - audit/test-report phrasing has not leaked into public copy;
 - the same fact is not repeated across card, hero, condition and technical sections without purpose;
 - negative statements describe known facts, not speculative possibilities;
@@ -138,6 +139,10 @@ Ask Craig only when there is a genuine unresolved source conflict, a material bu
 ## Core writing rule
 
 **Write the audit formally; write the catalogue page naturally.**
+
+**The voice matters more than the volume of technical detail.** A BenchSpec page is a simple, credible sales listing for people who usually know the part they want. Use direct, everyday English; stay accurate and matter-of-fact. Do not make the reader work through an internal audit report, specifications essay or long disclaimer. Prefer `Used, in good physical condition` over `externally intact`; prefer `Powered on at 24 V DC with status LEDs checked` over lab-report language. Keep essential safety/testing limits, but phrase them normally. Avoid `recorded sale configuration`, `audited batch`, `verification boundary` and `safety-function validation` in public copy.
+
+When several units share the same model and series, describe the **buyer-facing sale unit** simply. Do not expose revisions, date codes, origin or batch tracking just because those details exist in Ops, unless material to compatibility, condition or what is actually offered.
 
 The audit is evidence, not copy. Translate verified facts into concise technical prose that sounds like a competent specialist describing the item to another technical buyer.
 
@@ -251,6 +256,8 @@ Ask:
 
 - Does this sound like a human specialist rather than an audit report?
 - Can both an exact-part buyer and a category/application buyer understand the item quickly?
+- Could the main description be said naturally to a buyer in two short sentences?
+- Are there formal phrases that could be replaced with plain English without losing accuracy?
 - Is any sentence merely restating another sentence?
 - Has formal audit phrasing leaked into the public page?
 - Are the useful test results easy to understand?
