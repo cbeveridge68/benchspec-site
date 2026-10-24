@@ -140,7 +140,7 @@ Ask Craig only when there is a genuine unresolved source conflict, a material bu
 
 **Write the audit formally; write the catalogue page naturally.**
 
-**The voice matters more than the volume of technical detail.** A BenchSpec page is a simple, credible sales listing for people who usually know the part they want. Use direct, everyday English; stay accurate and matter-of-fact. Do not make the reader work through an internal audit report, specifications essay or long disclaimer. Prefer `Used, in good physical condition` over `externally intact`; prefer `Powered on at 24 V DC with status LEDs checked` over lab-report language. Keep essential safety/testing limits, but phrase them normally. Avoid `recorded sale configuration`, `audited batch`, `verification boundary` and `safety-function validation` in public copy.
+**The voice matters more than the volume of technical detail.** A BenchSpec page is a simple, credible sales listing for people who usually know the part they want. Use direct, everyday English; stay accurate and matter-of-fact. Do not make the reader work through an internal audit report, specifications essay or long disclaimer. Prefer `Used, in good physical condition` over `externally intact`; prefer `Powered on at 24 V DC with status LEDs checked` over lab-report language. State the completed checks and stop. Do not routinely append `Safety functions have not been tested` (or any other `not tested` sentence) after a clear power-on/LED test statement, including for safety I/O modules. Disclose a specific material safety issue or other required limitation when genuinely necessary, without adding boilerplate. Avoid `recorded sale configuration`, `audited batch`, `verification boundary` and `safety-function validation` in public copy.
 
 When several units share the same model and series, describe the **buyer-facing sale unit** simply. Do not expose revisions, date codes, origin or batch tracking just because those details exist in Ops, unless material to compatibility, condition or what is actually offered.
 
@@ -173,7 +173,7 @@ Use negative wording when it describes a **specific known fact** that matters to
 
 Do **not** introduce speculative negative statements about things that might be wrong, might fail, might be incompatible or were simply not investigated. Do not turn every unperformed audit test into a public disclaimer.
 
-A clearly scoped positive statement normally defines the verification boundary. For example, `Tested at 24 V DC and operating normally unloaded` does not require an added sentence listing pressure, vacuum or flow measurements that were not taken.
+A clearly scoped positive statement normally defines the verification boundary. For example, `Tested at 24 V DC and operating normally unloaded` does not require an added sentence listing pressure, vacuum or flow measurements that were not taken. Likewise `Powered on at 24 V DC with status LEDs checked` should **not** be followed by `Safety functions have not been tested.` A specific material issue or necessary safety disclosure is different from reciting a routine unperformed test.
 
 Only surface an unperformed-test boundary when omitting it would materially mislead a reasonable technical buyer about what BenchSpec verified.
 
@@ -261,6 +261,7 @@ Ask:
 - Is any sentence merely restating another sentence?
 - Has formal audit phrasing leaked into the public page?
 - Are the useful test results easy to understand?
+- Did we append a negative `not tested` sentence to a complete, scoped positive test result? Remove it unless a specific material disclosure requires it.
 - Is any negative statement a specific known fact, or is it speculative/defensive?
 - Could every technical claim be traced back to the Ops audit or documented product evidence?
 
