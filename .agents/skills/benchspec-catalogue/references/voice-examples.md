@@ -84,8 +84,8 @@ Problems: sounds like an audit report; introduces unnecessary stock variations; 
 
 > Allen-Bradley 1791DS-IB8XOB8 CompactBlock Guard Safety I/O module, Series A. Nine available, sold individually.
 >
-> Used, in good physical condition. Powered on at 24 V DC with status LEDs checked. Safety functions have not been tested.
+> Used, in good physical condition. Powered on at 24 V DC with status LEDs checked.
 >
 > One module with terminal blocks and DeviceNet connector fitted.
 
-Be just as straightforward for other items. Retain necessary material disclosures, but don't pad the page with manufacturer background, repetitive details or an inventory audit.
+**Why this stops here:** `Safety functions have not been tested` is a negative disclaimer and does not belong after an accurately scoped power-on/LED-check statement. The first sentence tells the buyer exactly what was done. This does not excuse withholding an actual fault or material safety issue. Be just as straightforward for other items; don't pad pages with manufacturer background, repetitive details or an inventory audit.
