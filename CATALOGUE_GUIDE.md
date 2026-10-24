@@ -28,7 +28,7 @@ Stock may include:
 
 The core differentiator is:
 
-**precise identification, full specification, clearly stated condition, and evidence-based verification.**
+**precise identification, useful specifications, clearly stated condition, and evidence-based verification.**
 
 Do not imply that every item is refurbished or fully function-tested.
 
@@ -60,6 +60,21 @@ Avoid:
 
 The page should read as though prepared by a technically competent specialist who knows exactly what the item is.
 
+### BenchSpec voice — apply to every product page
+
+Sound like a knowledgeable seller speaking directly to a buyer, **not** a lab report, technical manual, corporate brochure or legal disclaimer. Buyers generally know the part they need.
+
+- **Use everyday, direct language.** Write `Used, in good physical condition`, not `externally intact` or `visual condition assessed`.
+- **Keep sentences short.** Say what the item is, what BenchSpec checked and what the buyer receives. Stop there.
+- **Be confident but precise.** `Powered on at 24 V DC with status LEDs checked` is clearer than procedural descriptions of the inspection. Do not imply fully tested operation from a power-on check.
+- **Avoid internal language.** Do not carry phrases like `audited batch`, `recorded sale configuration`, `verification boundary`, `disposition` or `hardware-revision grouping` into customer copy.
+- **Avoid unnecessarily formal technical phrases.** Use normal product terms for identification and specifications, but don't write `safety-function validation`, `externally intact` or similar when a simpler accurate phrase exists.
+- **Don't explain what buyers already know.** Use one brief opening description rather than a general article about the technology.
+- **Don't be defensive.** Describe completed checks plainly. Include specific, material limits where needed for an honest sale, particularly safety-related equipment, without an exhaustive list of things not tested.
+- **Don't repeat yourself.** Condition, quantity, inclusions and tests should each have one clear home on the page.
+
+**Voice test:** Would this sound normal if BenchSpec told a technically competent buyer about the part in two sentences? If not, simplify it. Factual accuracy and material disclosures still take precedence over brevity.
+
 ## Identification first
 
 Every product page should make the exact identity obvious.
@@ -69,7 +84,7 @@ Where available, prominently include:
 - manufacturer;
 - exact model;
 - MPN / ordering code;
-- variant;
+- relevant series / sale-defining variant;
 - electrical ratings;
 - interfaces / connection type;
 - key included components;
@@ -84,6 +99,10 @@ The exact manufacturer/model/MPN should appear naturally in:
 - structured data.
 
 Do not simplify or shorten an exact identifier where doing so could reduce search relevance or technical clarity.
+
+For several units sold as the same model and series, describe the sale at that level: for example, `Series A. Nine available, sold individually.` Do not discuss internal revision, date-code or country-of-origin groups unless those details materially affect compatibility or the actual offer. Never suggest a buyer can select a variant on eBay unless the live listing supports it.
+
+Keep technical specifications useful and selective, not a copy of the manufacturer's entire data sheet. Preserve relevant ratings, interfaces and safety facts; omit operational inventory detail.
 
 ## Condition and verification
 
@@ -316,6 +335,8 @@ Before publishing or updating a page, confirm:
 - visible price is current;
 - stock status is current;
 - international shipping wording is accurate;
+- wording passes the plain-English BenchSpec voice test: no audit/report jargon, needless technical formality or repetition;
+- internal revision/date/origin tracking is omitted unless relevant to the sale;
 - condition wording leads with known facts;
 - negative statements describe specific known facts rather than speculative possibilities;
 - unperformed tests are mentioned only when omission would materially mislead;
