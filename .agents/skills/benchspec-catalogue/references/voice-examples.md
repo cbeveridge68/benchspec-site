@@ -69,3 +69,23 @@ Catalogue, normally:
 > Controller and wiring are clean and complete as supplied.
 
 Only retain detailed absence-of-damage wording where the specific area is commercially important or where a buyer would reasonably expect disclosure.
+
+## Allen-Bradley 1791DS-IB8XOB8 — tone and simplicity
+
+This example illustrates customer-facing voice and the right level of detail, **not** a substitute for checking the item's current Ops audit.
+
+### Too formal / confusing
+
+> Nine individually audited Series A units with recorded revision and origin variations. Externally intact, with basic power-on verification performed; safety-function validation not undertaken. Selection is subject to recorded sale configuration.
+
+Problems: sounds like an audit report; introduces unnecessary stock variations; suggests a variant-selection process; uses formal phrasing where normal English works.
+
+### Preferred listing voice
+
+> Allen-Bradley 1791DS-IB8XOB8 CompactBlock Guard Safety I/O module, Series A. Nine available, sold individually.
+>
+> Used, in good physical condition. Powered on at 24 V DC with status LEDs checked. Safety functions have not been tested.
+>
+> One module with terminal blocks and DeviceNet connector fitted.
+
+Be just as straightforward for other items. Retain necessary material disclosures, but don't pad the page with manufacturer background, repetitive details or an inventory audit.
