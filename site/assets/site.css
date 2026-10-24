@@ -97,7 +97,16 @@ p + p { margin-top: 1rem; }
 .domel-product .offer,
 .domel-product .key-specs > div,
 .domel-product .product-details,
-.domel-product .detail-section { min-width: 0; overflow-wrap: anywhere; }
+.domel-product .detail-section,
+.compactblock-product .product-heading,
+.compactblock-product .product-heading h1,
+.compactblock-product .product-heading .caption,
+.compactblock-product .product-overview,
+.compactblock-product .product-photos,
+.compactblock-product .offer,
+.compactblock-product .key-specs > div,
+.compactblock-product .product-details,
+.compactblock-product .detail-section { min-width: 0; overflow-wrap: anywhere; }
 .product-overview { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 48px; align-items: start; }
 .product-photos a { display: block; }
 .main-photo img { width: 100%; aspect-ratio: 1; object-fit: contain; background: var(--surface); }
@@ -145,6 +154,8 @@ td { overflow-wrap: anywhere; }
 @media (max-width: 760px) {
   .wrap { width: calc(100% - 36px); }
   .header-inner { min-height: 94px; padding-block: 16px; gap: 18px; }
+  .header-inner { flex-wrap: wrap; }
+  .header-meta { flex: 1 1 100%; text-align: left; }
   .brand-note { font-size: .7rem; }
   .header-meta { font-size: .73rem; }
   .intro { padding-block: 28px; }

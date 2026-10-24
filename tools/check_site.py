@@ -153,6 +153,7 @@ def check(root, publication=False):
                 "tested together at 24 v dc and operating normally",
                 "all 18 rj45 copper interfaces passed link and data-communication testing",
                 "this verification confirms powered startup and tcp/ip access to the adapter diagnostics; no commissioned plc i/o session was performed",
+                "used, in good physical condition. powered on at 24 v dc with status leds checked",
                 "this was a functional response test. the matching tsi factory calibration certificate is dated 8 april 2014",
             )
             if rel == "products/infinity-fluids-ptc-12-20-1p/index.html":
