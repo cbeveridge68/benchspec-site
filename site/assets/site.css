@@ -106,7 +106,15 @@ p + p { margin-top: 1rem; }
 .compactblock-product .offer,
 .compactblock-product .key-specs > div,
 .compactblock-product .product-details,
-.compactblock-product .detail-section { min-width: 0; overflow-wrap: anywhere; }
+.compactblock-product .detail-section,
+.point-io-product .product-heading,
+.point-io-product .product-heading h1,
+.point-io-product .product-heading .caption,
+.point-io-product .product-overview,
+.point-io-product .product-photos,
+.point-io-product .offer,
+.point-io-product .product-details,
+.point-io-product .detail-section { min-width: 0; overflow-wrap: anywhere; }
 .product-overview { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 48px; align-items: start; }
 .product-photos a { display: block; }
 .main-photo img { width: 100%; aspect-ratio: 1; object-fit: contain; background: var(--surface); }

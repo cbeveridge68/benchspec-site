@@ -2,7 +2,7 @@
 
 Small, hand-authored catalogue for specialist technical equipment and parts. Production origin: **https://benchspec.com.au**. Purchases take place on eBay.
 
-The catalogue contains seventeen available-equipment pages, plus the retained sold record for the TSI 4140D thermal mass flow meter kit. The original Lot 31 process, flow, pressure, filtration and high-purity equipment remains available. Actual-item photographs are included throughout. Evidence, item-specific blockers and separate launch checks are recorded in [WORK.md](WORK.md).
+The catalogue contains twenty-one available-equipment pages, plus the retained sold record for the TSI 4140D thermal mass flow meter kit. The original Lot 31 process, flow, pressure, filtration and high-purity equipment remains available. Actual-item photographs are included throughout. Evidence, item-specific blockers and separate launch checks are recorded in [WORK.md](WORK.md).
 
 ## Preview and check
 
