@@ -134,7 +134,12 @@ def check(root, publication=False):
             price = float(offer.get("price", 0))
             amount = f"A${price:,.0f}" if price.is_integer() else f"A${price:,.2f}"
             require(amount in visible, prefix + "visible/structured price mismatch")
-            require(offer.get("itemCondition") == "https://schema.org/UsedCondition", prefix + "condition mismatch")
+            expected_condition = (
+                "https://schema.org/NewCondition"
+                if rel == "products/allen-bradley-1734-tb/index.html"
+                else "https://schema.org/UsedCondition"
+            )
+            require(offer.get("itemCondition") == expected_condition, prefix + "condition mismatch")
             # Specific recorded boundaries for the current catalogue, not a bare
             # "untested" label. Keep the same explicit disclosure in both places.
             verification_limits = (
@@ -155,6 +160,9 @@ def check(root, publication=False):
                 "this verification confirms powered startup and tcp/ip access to the adapter diagnostics; no commissioned plc i/o session was performed",
                 "used, in good physical condition. powered on at 24 v dc with status leds checked",
                 "used, with normal cosmetic signs from prior service. passed a basic 24 v dc power and status-led check",
+                "unused surplus in original unopened carton. identity and seal condition verified from external labels",
+                "powered at 24 v dc; ethernet link established and ping response confirmed at 192.168.1.101",
+                "used condition with normal cosmetic wear from prior service. powered on with the module status indicator green",
                 "this was a functional response test. the matching tsi factory calibration certificate is dated 8 april 2014",
             )
             if rel == "products/infinity-fluids-ptc-12-20-1p/index.html":

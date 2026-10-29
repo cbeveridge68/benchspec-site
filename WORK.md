@@ -1,5 +1,15 @@
 # Work record — Lot 31 catalogue batch 1
 
+## Allen-Bradley POINT I/O catalogue additions — 29 October 2026
+
+- Reconciled the user-supplied eBay set against refreshed Ops commit `2ec03ef129f90b5cbc2b6113e5c54ed7d164d371` and the existing catalogue. The requested 1734-ADN firmware 3.001, 2.006 and 2.008 pages were already present with their corrected eBay destinations. Added the four missing offers: 1734-TB Series A, 1734-AENT Series A firmware 3.007, and separate 1734-232ASC Series C firmware 4.001 and 4.002 pages.
+- Grounded identity, condition, configuration, quantities, completed checks and technical context in Ops audits `5027-3037070-1734-TB`, `5027-3037070-1734-AENT` and `5027-3037070-1734-232ASC`, plus their retained live-listing records. No technical claim was added from ad-hoc web research.
+- Current public offers are: 1734-TB at A$49 each, six unopened-carton units, eBay `198743841853`; 1734-AENT at A$229, one used unit, eBay `198750828723`; 1734-232ASC firmware 4.001 at A$54.95 each, quantity 21, eBay `198753925131`; and firmware 4.002 at A$54.95 each, quantity 8, eBay `198753927515`.
+- Buyer-facing verification language follows the durable evidence: 1734-TB identity and intact unopened-carton condition were verified externally; the 1734-AENT was powered at 24 V DC and established Ethernet link and ping response at `192.168.1.101`; both 1734-232ASC groups powered on with the Module Status indicator green. No broader commissioning, serial-communication or calibration claim is made.
+- Preserved seven selected actual-item source images under product-specific `raw-images/` directories and generated full-resolution and 480 px WebP assets. Pages and catalogue cards use only the corresponding Ops photographs; no stock or generated image is used.
+- Catalogue cards, detail pages, SEO metadata and Product/Offer structured data agree on exact MPN, firmware, supplied hardware, quantity, price and eBay destination. The available-equipment count is now 25.
+- The sitemap now contains 27 URLs: the homepage, 25 available product records and the retained sold record. Normal and publication site checks pass for all 27 HTML pages; sitemap and SVG XML parsing and `git diff --check` pass. Desktop and true 390 px mobile renders of the homepage and all four new detail-page variants were visually reviewed; image treatment, offer hierarchy, long identifiers and technical tables render cleanly.
+
 ## Allen-Bradley 1734-ADN firmware-group catalogue additions — 27 October 2026
 
 - Reconciled the catalogue against refreshed Ops commit `8eefdd0d07b1307cded42d85657f82b282d2e889`, audit `5027-3037070-1734-ADN`, after the firmware grouping, supplied configuration and approved photography changed. The catalogue now has separate permanent pages for firmware 3.001, 2.006 and 2.008.
