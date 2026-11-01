@@ -1,5 +1,13 @@
 # Work record — Lot 31 catalogue batch 1
 
+## Current eBay price reconciliation — 2 November 2026
+
+- Reconciled the operator-supplied active-listings export by exact eBay item ID against every available BenchSpec catalogue offer. All 25 catalogue offers represented in the export retain the correct eBay destination and available quantity.
+- Updated 12 mismatched public prices: Swagelok 6LV-CW4BW4 A$329 → A$229; Perma Pure FC125-240-5MP A$650 → A$550; Spirax Sarco FA-150 A$525 → A$325; Infinity Fluids PTC-12-20-1P A$1,295 → A$950; Infinity Fluids CRES-ILB-12-0010-K-XP-PTC A$1,295 → A$995; Thomas 118ZC20/24UV A$449 → A$349; Allen-Bradley 1783-BMS20CL A$495 → A$390; Domel 497.3.230 A$549 → A$349; Allen-Bradley 1794-AENT FW 4.004 A$299 → A$199; Allen-Bradley 1734-AENT A$229 → A$149; and both 1734-232ASC firmware groups A$54.95 → A$54.90 each.
+- Applied each price to the homepage card, visible product offer, Product/Offer structured data and price-bearing metadata/descriptions. Product identity, condition, technical claims, photography, quantity, availability and eBay URLs are unchanged. Updated the 12 affected catalogue-review dates to 2 November 2026.
+- Six active eBay offers in the export do not yet have BenchSpec catalogue pages: AAEON BOXER-6614-C5-CS-W002, Dell PowerVault MD1200, Overland SnapServer DX2, Dell OptiPlex 7040 SFF, Dell OptiPlex 7450 AIO and Allen-Bradley 1734-IT2I. They remain outside this price-only site reconciliation pending the normal Ops evidence/page workflow.
+- Automated item-ID reconciliation reports 25 matched catalogue offers with no price or quantity mismatches; all 25 homepage-card prices match their Product/Offer structured prices. Normal and publication checks pass for all 27 HTML pages, sitemap XML and `git diff --check` pass, and no superseded price remains in the affected pages. Desktop and true 390 px mobile renders of the homepage and representative expanded, legacy and compact product-page layouts were visually reviewed; price prominence, wrapping and surrounding layout remain clean.
+
 ## Allen-Bradley POINT I/O catalogue additions — 29 October 2026
 
 - Reconciled the user-supplied eBay set against refreshed Ops commit `2ec03ef129f90b5cbc2b6113e5c54ed7d164d371` and the existing catalogue. The requested 1734-ADN firmware 3.001, 2.006 and 2.008 pages were already present with their corrected eBay destinations. Added the four missing offers: 1734-TB Series A, 1734-AENT Series A firmware 3.007, and separate 1734-232ASC Series C firmware 4.001 and 4.002 pages.
