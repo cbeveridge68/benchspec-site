@@ -163,6 +163,8 @@ def check(root, publication=False):
                 "unused surplus in original unopened carton. identity and seal condition verified from external labels",
                 "powered at 24 v dc; ethernet link established and ping response confirmed at 192.168.1.101",
                 "used condition with normal cosmetic wear from prior service. powered on with the module status indicator green",
+                "green module status",
+                "green system power and devicenet power indicators",
                 "this was a functional response test. the matching tsi factory calibration certificate is dated 8 april 2014",
             )
             if rel == "products/infinity-fluids-ptc-12-20-1p/index.html":

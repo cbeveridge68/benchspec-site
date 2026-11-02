@@ -1,5 +1,22 @@
 # Work record — Lot 31 catalogue batch 1
 
+## Allen-Bradley POINT I/O catalogue additions — 2 November 2026
+
+- Refreshed the durable Ops source to commit `9f6a652` and grounded the six added offers in their matching audit, approved listing and pricing records. The batch is limited to automation equipment; the recently listed AAEON and Dell IT equipment remains outside the catalogue.
+- Added permanent pages and current-stock cards for Allen-Bradley 1734-IT2I, 1734-IE2V, 1734-IB4, two distinct 1734-OB4E firmware groups and 1734-PDN. The public offers are: 1734-IT2I at A$129.95 each, quantity 2, eBay `198759305956`; 1734-IE2V at A$99 each, quantity 2, eBay `198763661938`; 1734-IB4 at A$25 each, quantity 3, eBay `198763694350`; 1734-OB4E Series A firmware 1.004 at A$35, eBay `198763681581`; 1734-OB4E Series C firmware 3.014 at A$35, eBay `198763673653`; and 1734-PDN at A$69.95 each, quantity 4, eBay `198764431217`.
+- Buyer-facing identity, configuration and verification language stays within the durable evidence. Each module or assembly completed the recorded 24 V DC power-up and status-indicator check. Representative revision and firmware values are clearly scoped for the grouped 1734-IE2V and 1734-IB4 offers. The two 1734-OB4E revisions have separate URLs so their Series and firmware identities remain exact.
+- The 1734-IT2I offer contains two bare thermocouple input modules and records the observed brown discolouration across the upper front strip; mounting bases and cold-junction compensation terminal blocks are not included. Each 1734-PDN sale unit is a complete assembly with base, five-position DeviceNet connector and eight-position removable terminal block; the Series B Revision A01/A02 units are intentionally grouped.
+- Preserved the selected actual-item PNG sources in six product-specific `raw-images/` directories and generated full-size and 480 px WebP derivatives for the catalogue. No stock, generated or unrelated photography is used.
+- Catalogue cards, detail pages, SEO metadata and Product/Offer structured data agree on exact MPN, series/firmware where applicable, supplied configuration, current price, available quantity and eBay destination. The available-equipment count is now 30, alongside two retained sold records.
+- The generated sitemap contains 33 URLs: the homepage, 30 current product records and two retained sold records. Normal and publication checks pass across all 33 HTML pages; sitemap and SVG XML parsing, HTML validation for the six new routes and `git diff --check` pass. Desktop and true 390 px mobile renders of every new detail page and the updated catalogue index were visually reviewed; actual-item image framing, long identifiers, offer hierarchy, gallery layout and responsive tables are clean.
+
+## Allen-Bradley 1794-AENT/B sold-state update — 2 November 2026
+
+- Craig confirmed that all five Allen-Bradley 1794-AENT/B Series B, factory-FW-4.004 units have sold. The permanent product URL and its actual-item photography, identity, condition and verification record are retained.
+- Removed the group from current stock and moved it to the sold-equipment section. The available-equipment count is now 24, with two retained sold records.
+- Changed the page and Product/Offer structured data to sold state, removed the active purchase action and current-sale wording, and retained A$199 each only as the last asking price per unit. The former eBay destination remains solely as structured offer provenance.
+- Normal and publication site checks pass across all 27 HTML pages; sitemap and SVG XML parsing and `git diff --check` pass. Desktop and true 390 px mobile renders of the updated product record and the two-card sold-equipment section were visually reviewed; sold state, pricing labels, card layout and responsive wrapping are clean.
+
 ## Current eBay price reconciliation — 2 November 2026
 
 - Reconciled the operator-supplied active-listings export by exact eBay item ID against every available BenchSpec catalogue offer. All 25 catalogue offers represented in the export retain the correct eBay destination and available quantity.
